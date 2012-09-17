@@ -1,0 +1,249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		960FA0931605819F00923A87 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960FA0921605819F00923A87 /* CoreFoundation.framework */; };
+		960FA0A2160584AC00923A87 /* BetterConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 960FA0A1160584AC00923A87 /* BetterConsole.m */; };
+		960FA0A51605858E00923A87 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960FA0A31605858400923A87 /* AppKit.framework */; };
+		9624292D1606D62900C3B076 /* FilePathHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624292C1606D62900C3B076 /* FilePathHighlighter.m */; };
+		96316C121606DC1A00834CE3 /* FilePathNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96316C111606DC1A00834CE3 /* FilePathNavigator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		960FA08F1605819F00923A87 /* SchemeShortcuts.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SchemeShortcuts.xcplugin; path = BetterConsole.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		960FA0921605819F00923A87 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		960FA0961605819F00923A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		960FA0A0160584AC00923A87 /* BetterConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetterConsole.h; sourceTree = "<group>"; };
+		960FA0A1160584AC00923A87 /* BetterConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetterConsole.m; sourceTree = "<group>"; };
+		960FA0A31605858400923A87 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9624292B1606D62900C3B076 /* FilePathHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePathHighlighter.h; sourceTree = "<group>"; };
+		9624292C1606D62900C3B076 /* FilePathHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePathHighlighter.m; sourceTree = "<group>"; };
+		96316C101606DC1A00834CE3 /* FilePathNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePathNavigator.h; sourceTree = "<group>"; };
+		96316C111606DC1A00834CE3 /* FilePathNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePathNavigator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		960FA08C1605819F00923A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960FA0A51605858E00923A87 /* AppKit.framework in Frameworks */,
+				960FA0931605819F00923A87 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		960FA0841605819F00923A87 = {
+			isa = PBXGroup;
+			children = (
+				960FA0941605819F00923A87 /* BetterConsole */,
+				960FA0951605819F00923A87 /* Supporting Files */,
+				960FA0911605819F00923A87 /* Frameworks */,
+				960FA0901605819F00923A87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		960FA0901605819F00923A87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				960FA08F1605819F00923A87 /* SchemeShortcuts.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		960FA0911605819F00923A87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				960FA0A31605858400923A87 /* AppKit.framework */,
+				960FA0921605819F00923A87 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		960FA0941605819F00923A87 /* BetterConsole */ = {
+			isa = PBXGroup;
+			children = (
+				960FA0A0160584AC00923A87 /* BetterConsole.h */,
+				960FA0A1160584AC00923A87 /* BetterConsole.m */,
+				9624292B1606D62900C3B076 /* FilePathHighlighter.h */,
+				9624292C1606D62900C3B076 /* FilePathHighlighter.m */,
+				96316C101606DC1A00834CE3 /* FilePathNavigator.h */,
+				96316C111606DC1A00834CE3 /* FilePathNavigator.m */,
+			);
+			path = BetterConsole;
+			sourceTree = "<group>";
+		};
+		960FA0951605819F00923A87 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				960FA0961605819F00923A87 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = BetterConsole;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		960FA08E1605819F00923A87 /* BetterConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 960FA09D160581A000923A87 /* Build configuration list for PBXNativeTarget "BetterConsole" */;
+			buildPhases = (
+				960FA08B1605819F00923A87 /* Sources */,
+				960FA08C1605819F00923A87 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterConsole;
+			productName = BetterConsole;
+			productReference = 960FA08F1605819F00923A87 /* SchemeShortcuts.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		960FA0861605819F00923A87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = 960FA0891605819F00923A87 /* Build configuration list for PBXProject "BetterConsole" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 960FA0841605819F00923A87;
+			productRefGroup = 960FA0901605819F00923A87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				960FA08E1605819F00923A87 /* BetterConsole */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		960FA08B1605819F00923A87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960FA0A2160584AC00923A87 /* BetterConsole.m in Sources */,
+				9624292D1606D62900C3B076 /* FilePathHighlighter.m in Sources */,
+				96316C121606DC1A00834CE3 /* FilePathNavigator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		960FA09B160581A000923A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		960FA09C160581A000923A87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		960FA09E160581A000923A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = BetterConsole/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		960FA09F160581A000923A87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = BetterConsole/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		960FA0891605819F00923A87 /* Build configuration list for PBXProject "BetterConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				960FA09B160581A000923A87 /* Debug */,
+				960FA09C160581A000923A87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		960FA09D160581A000923A87 /* Build configuration list for PBXNativeTarget "BetterConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				960FA09E160581A000923A87 /* Debug */,
+				960FA09F160581A000923A87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 960FA0861605819F00923A87 /* Project object */;
+}
