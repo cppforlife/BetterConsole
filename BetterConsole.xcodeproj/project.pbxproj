@@ -25,6 +25,7 @@
 		9624292C1606D62900C3B076 /* FilePathHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePathHighlighter.m; sourceTree = "<group>"; };
 		96316C101606DC1A00834CE3 /* FilePathNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePathNavigator.h; sourceTree = "<group>"; };
 		96316C111606DC1A00834CE3 /* FilePathNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePathNavigator.m; sourceTree = "<group>"; };
+		96FF2B871609E08D00D2A383 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 		960FA0841605819F00923A87 = {
 			isa = PBXGroup;
 			children = (
+				96FF2B871609E08D00D2A383 /* README.md */,
 				960FA0941605819F00923A87 /* BetterConsole */,
 				960FA0951605819F00923A87 /* Supporting Files */,
 				960FA0911605819F00923A87 /* Frameworks */,
