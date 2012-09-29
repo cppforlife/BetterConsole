@@ -75,7 +75,7 @@ void FilePathNavigator_Handler(CFNotificationCenterRef center, void *observer, C
     static char Observer;
 
     if (!objc_getAssociatedObject(self.textView, &Observer)) {
-        objc_setAssociatedObject(self.textView, &Observer, @YES, OBJC_ASSOCIATION_RETAIN);
+        objc_setAssociatedObject(self.textView, &Observer, [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN);
 
         CFNotificationCenterAddObserver(
             CFNotificationCenterGetLocalCenter(),

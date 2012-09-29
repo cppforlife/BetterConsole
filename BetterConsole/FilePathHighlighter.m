@@ -27,54 +27,51 @@
     return rx; // leaks - regfree(&rx);
 }
 
-NSArray *FilePathHighlighter_findFilePaths(NSTextStorage *textStorage) {
+NSArray *FilePathHighlighter_findFilePathRanges(NSTextStorage *textStorage) {
+    NSMutableArray *filePathRanges = [NSMutableArray array];
+    const char *text = textStorage.string.UTF8String;
+
     regex_t rx = [FilePathHighlighter _filePathRegex];
-    regmatch_t *matches;
-    matches = (regmatch_t *)malloc((rx.re_nsub+1) * sizeof(regmatch_t));
+    regmatch_t *matches = malloc((rx.re_nsub+1) * sizeof(regmatch_t));
+    NSUInteger matchStartIndex = 0;
 
-    NSMutableArray *filePaths = [NSMutableArray array];
-    const char *buf = [textStorage.string UTF8String];
-
-    while(regexec(&rx, buf, rx.re_nsub+1, matches, 0) == 0) {
-        const void *bytes = (buf + matches[1].rm_so);
-        NSUInteger length = (NSInteger)(matches[1].rm_eo - matches[1].rm_so);
-
-        NSString *filePath = [[NSString alloc] initWithBytes:bytes length:length encoding:NSUTF8StringEncoding];
-        [filePaths addObject:filePath];
-        [filePath release];
-
-        buf = bytes + length;
+    while (regexec(&rx, text + matchStartIndex, rx.re_nsub+1, matches, 0) == 0) {
+        NSRange range = NSMakeRange(
+            (NSUInteger)(matches[1].rm_so + matchStartIndex),
+            (NSUInteger)(matches[1].rm_eo - matches[1].rm_so));
+        [filePathRanges addObject:[NSValue valueWithRange:range]];
+        matchStartIndex += matches[1].rm_eo;
     }
 
     free(matches);
-    return filePaths;
+    return filePathRanges;
 }
 
-void FilePathHighlighter_highlightFilePaths(NSArray *filePaths, NSTextStorage *textStorage) {
-    for (NSString *filePath in filePaths) {
-        NSRange range = [textStorage.string rangeOfString:filePath];
-        if (range.location != NSNotFound) {
-            [textStorage addAttributes:@{
-                NSCursorAttributeName : [NSCursor pointingHandCursor],
-                NSForegroundColorAttributeName : [NSColor darkGrayColor],
-                NSUnderlineStyleAttributeName : @1,
-                @"BetterConsoleFilePath" : filePath
-            } range:range];
-        }
+void FilePathHighlighter_highlightFilePathRanges(NSArray *filePathRanges, NSTextStorage *textStorage) {
+    for (NSValue *rangeValue in filePathRanges) {
+        NSString *filePath = [textStorage.string substringWithRange:rangeValue.rangeValue];
+
+        [textStorage addAttributes:
+            [NSDictionary dictionaryWithObjectsAndKeys:
+                [NSCursor pointingHandCursor], NSCursorAttributeName,
+                [NSColor darkGrayColor], NSForegroundColorAttributeName,
+                [NSNumber numberWithInt:1], NSUnderlineStyleAttributeName,
+                filePath, @"BetterConsoleFilePath", nil]
+        range:rangeValue.rangeValue];
     }
 }
 
 void FilePathHighlighter_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     NSTextStorage *textStorage = (NSTextStorage *)object;
-    NSArray *filePaths = FilePathHighlighter_findFilePaths(textStorage);
-    FilePathHighlighter_highlightFilePaths(filePaths, textStorage);
+    NSArray *filePaths = FilePathHighlighter_findFilePathRanges(textStorage);
+    FilePathHighlighter_highlightFilePathRanges(filePaths, textStorage);
 }
 
 - (void)attach {
     static char Observer;
 
     if (!objc_getAssociatedObject(self.textView, &Observer)) {
-        objc_setAssociatedObject(self.textView, &Observer, @YES, OBJC_ASSOCIATION_RETAIN);
+        objc_setAssociatedObject(self.textView, &Observer, [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN);
 
         CFNotificationCenterAddObserver(
             CFNotificationCenterGetLocalCenter(),
