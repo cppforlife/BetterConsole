@@ -22,9 +22,12 @@
 }
 
 + (regex_t)_filePathRegex {
-    regex_t rx;
-    regcomp(&rx, "(/[^:]+:[[:digit:]]+)", REG_EXTENDED);
-    return rx; // leaks - regfree(&rx);
+    static regex_t *rx = NULL;
+    if (!rx) {
+        rx = malloc(sizeof(regex_t));
+        regcomp(rx, "(/[^:\n\r]+:[[:digit:]]+)", REG_EXTENDED);
+    }
+    return *rx;
 }
 
 NSArray *FilePathHighlighter_findFilePathRanges(NSTextStorage *textStorage) {
