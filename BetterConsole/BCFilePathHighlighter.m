@@ -3,23 +3,20 @@
 #import <objc/runtime.h>
 #import <regex.h>
 
-@interface BCFilePathHighlighter ()
-@property (strong, nonatomic) NSTextView *textView;
-@end
-
 @implementation BCFilePathHighlighter
-@synthesize textView = _textView;
 
-- (id)initWithTextView:(NSTextView *)textView {
-    if (self = [super init]) {
-        self.textView = textView;
++ (void)attachToTextView:(NSTextView *)textView {
+    static char Observer;
+
+    if (!objc_getAssociatedObject(textView, &Observer)) {
+        objc_setAssociatedObject(textView, &Observer, [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN);
+
+        CFNotificationCenterAddObserver(
+            CFNotificationCenterGetLocalCenter(),
+            NULL, BCFilePathHighlighter_Handler,
+            (CFStringRef)NSTextStorageDidProcessEditingNotification,
+            textView.textStorage, CFNotificationSuspensionBehaviorDeliverImmediately);
     }
-    return self;
-}
-
-- (void)dealloc {
-    [_textView release];
-    [super dealloc];
 }
 
 + (regex_t)_filePathRegex {
@@ -71,20 +68,6 @@ void BCFilePathHighlighter_Handler(CFNotificationCenterRef center, void *observe
         NSTextStorage *textStorage = (NSTextStorage *)object;
         NSArray *filePathRanges = BCFilePathHighlighter_findFilePathRanges(textStorage);
         BCFilePathHighlighter_highlightFilePathRanges(textStorage, filePathRanges);
-    }
-}
-
-- (void)attach {
-    static char Observer;
-
-    if (!objc_getAssociatedObject(self.textView, &Observer)) {
-        objc_setAssociatedObject(self.textView, &Observer, [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN);
-
-        CFNotificationCenterAddObserver(
-            CFNotificationCenterGetLocalCenter(),
-            NULL, BCFilePathHighlighter_Handler,
-            (CFStringRef)NSTextStorageDidProcessEditingNotification,
-            self.textView.textStorage, CFNotificationSuspensionBehaviorDeliverImmediately);
     }
 }
 @end

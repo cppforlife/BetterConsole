@@ -1,9 +1,5 @@
 #import <Cocoa/Cocoa.h>
 
-@interface BCFilePathNavigator : NSObject {
-    NSTextView *_textView;
-}
-
-- (id)initWithTextView:(NSTextView *)textView;
-- (void)attach;
+@interface BCFilePathNavigator : NSObject
++ (void)attachToTextView:(NSTextView *)textView;
 @end

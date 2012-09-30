@@ -2,23 +2,20 @@
 #import "BCUtils.h"
 #import <objc/runtime.h>
 
-@interface BCColorHighlighter ()
-@property (strong, nonatomic) NSTextView *textView;
-@end
-
 @implementation BCColorHighlighter
-@synthesize textView = _textView;
 
-- (id)initWithTextView:(NSTextView *)textView {
-    if (self = [super init]) {
-        self.textView = textView;
++ (void)attachToTextView:(NSTextView *)textView {
+    static char Observer;
+
+    if (!objc_getAssociatedObject(textView, &Observer)) {
+        objc_setAssociatedObject(textView, &Observer, [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN);
+
+        CFNotificationCenterAddObserver(
+            CFNotificationCenterGetLocalCenter(),
+            NULL, BCColorHighlighter_Handler,
+            (CFStringRef)NSTextStorageDidProcessEditingNotification,
+            textView.textStorage, CFNotificationSuspensionBehaviorDeliverImmediately);
     }
-    return self;
-}
-
-- (void)dealloc {
-    [_textView release];
-    [super dealloc];
 }
 
 NSColor *BCColorHighlighter_ColorByKey(NSString *key) {
@@ -99,20 +96,6 @@ void BCColorHighlighter_Handler(CFNotificationCenterRef center, void *observer, 
     BCTimeLog(@"BetterConsole - ColorHightlighter") {
         NSTextStorage *textStorage = (NSTextStorage *)object;
         BCColorHighlighter_Highlight(textStorage);
-    }
-}
-
-- (void)attach {
-    static char Observer;
-
-    if (!objc_getAssociatedObject(self.textView, &Observer)) {
-        objc_setAssociatedObject(self.textView, &Observer, [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN);
-
-        CFNotificationCenterAddObserver(
-            CFNotificationCenterGetLocalCenter(),
-            NULL, BCColorHighlighter_Handler,
-            (CFStringRef)NSTextStorageDidProcessEditingNotification,
-            self.textView.textStorage, CFNotificationSuspensionBehaviorDeliverImmediately);
     }
 }
 @end

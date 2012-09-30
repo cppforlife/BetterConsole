@@ -43,17 +43,9 @@
     NSTextView *textView = self._currentConsoleView;
     if (!textView) return;
 
-    BCFilePathHighlighter *pathHighlighter = [[BCFilePathHighlighter alloc] initWithTextView:textView];
-    [pathHighlighter attach];
-    [pathHighlighter release];
-
-    BCColorHighlighter *colorHighlighter = [[BCColorHighlighter alloc] initWithTextView:textView];
-    [colorHighlighter attach];
-    [colorHighlighter release];
-
-    BCFilePathNavigator *pathNavigator = [[BCFilePathNavigator alloc] initWithTextView:textView];
-    [pathNavigator attach];
-    [pathNavigator release];
+    [BCFilePathHighlighter attachToTextView:textView];
+    [BCColorHighlighter attachToTextView:textView];
+    [BCFilePathNavigator attachToTextView:textView];
 }
 
 - (id)_currentWorkspaceController {

@@ -14,23 +14,20 @@
 - (id)primaryEditorContext;
 @end
 
-@interface BCFilePathNavigator ()
-@property (strong, nonatomic) NSTextView *textView;
-@end
-
 @implementation BCFilePathNavigator
-@synthesize textView = _textView;
 
-- (id)initWithTextView:(NSTextView *)textView {
-    if (self = [super init]) {
-        self.textView = textView;
++ (void)attachToTextView:(NSTextView *)textView {
+    static char Observer;
+
+    if (!objc_getAssociatedObject(textView, &Observer)) {
+        objc_setAssociatedObject(textView, &Observer, [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN);
+
+        CFNotificationCenterAddObserver(
+            CFNotificationCenterGetLocalCenter(),
+            NULL, BCFilePathNavigator_Handler,
+            (CFStringRef)NSTextViewDidChangeSelectionNotification,
+            textView, CFNotificationSuspensionBehaviorDeliverImmediately);
     }
-    return self;
-}
-
-- (void)dealloc {
-    [_textView release];
-    [super dealloc];
 }
 
 void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
@@ -68,20 +65,6 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
                 structureEditorOpenSpecifierForDocumentLocation:location
                 inWorkspace:workspace
                 error:NULL]];
-    }
-}
-
-- (void)attach {
-    static char Observer;
-
-    if (!objc_getAssociatedObject(self.textView, &Observer)) {
-        objc_setAssociatedObject(self.textView, &Observer, [NSNumber numberWithBool:YES], OBJC_ASSOCIATION_RETAIN);
-
-        CFNotificationCenterAddObserver(
-            CFNotificationCenterGetLocalCenter(),
-            NULL, BCFilePathNavigator_Handler,
-            (CFStringRef)NSTextViewDidChangeSelectionNotification,
-            self.textView, CFNotificationSuspensionBehaviorDeliverImmediately);
     }
 }
 @end
