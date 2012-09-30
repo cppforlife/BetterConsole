@@ -12,6 +12,8 @@
 		960FA0A51605858E00923A87 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960FA0A31605858400923A87 /* AppKit.framework */; };
 		9624292D1606D62900C3B076 /* BCFilePathHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */; };
 		96316C121606DC1A00834CE3 /* BCFilePathNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */; };
+		9675DE98161869F400590F98 /* BCColorHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9675DE97161869F400590F98 /* BCColorHighlighter.m */; };
+		96F5380E16188F7800FD9AAF /* BCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5380D16188F7800FD9AAF /* BCUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		960FA08F1605819F00923A87 /* BetterConsole.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BetterConsole.xcplugin; path = BetterConsole.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		960FA08F1605819F00923A87 /* BetterConsole.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterConsole.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		960FA0921605819F00923A87 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		960FA0961605819F00923A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960FA0A0160584AC00923A87 /* BetterConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetterConsole.h; sourceTree = "<group>"; };
@@ -35,7 +37,11 @@
 		9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFilePathHighlighter.m; sourceTree = "<group>"; };
 		96316C101606DC1A00834CE3 /* BCFilePathNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFilePathNavigator.h; sourceTree = "<group>"; };
 		96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFilePathNavigator.m; sourceTree = "<group>"; };
+		9675DE96161869F400590F98 /* BCColorHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCColorHighlighter.h; sourceTree = "<group>"; };
+		9675DE97161869F400590F98 /* BCColorHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCColorHighlighter.m; sourceTree = "<group>"; };
 		969653701618016300C28CE0 /* clean.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = clean.sh; sourceTree = "<group>"; };
+		96F5380C16188F7800FD9AAF /* BCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCUtils.h; sourceTree = "<group>"; };
+		96F5380D16188F7800FD9AAF /* BCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCUtils.m; sourceTree = "<group>"; };
 		96FF2B871609E08D00D2A383 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +95,10 @@
 				9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */,
 				96316C101606DC1A00834CE3 /* BCFilePathNavigator.h */,
 				96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */,
+				9675DE96161869F400590F98 /* BCColorHighlighter.h */,
+				9675DE97161869F400590F98 /* BCColorHighlighter.m */,
+				96F5380C16188F7800FD9AAF /* BCUtils.h */,
+				96F5380D16188F7800FD9AAF /* BCUtils.m */,
 			);
 			path = BetterConsole;
 			sourceTree = "<group>";
@@ -174,6 +184,8 @@
 				960FA0A2160584AC00923A87 /* BetterConsole.m in Sources */,
 				9624292D1606D62900C3B076 /* BCFilePathHighlighter.m in Sources */,
 				96316C121606DC1A00834CE3 /* BCFilePathNavigator.m in Sources */,
+				9675DE98161869F400590F98 /* BCColorHighlighter.m in Sources */,
+				96F5380E16188F7800FD9AAF /* BCUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

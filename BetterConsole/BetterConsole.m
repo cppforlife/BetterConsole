@@ -1,6 +1,7 @@
 #import "BetterConsole.h"
 #import "BCFilePathHighlighter.h"
 #import "BCFilePathNavigator.h"
+#import "BCColorHighlighter.h"
 
 @interface BetterConsole (BCClassDump)
 - (id)editorArea;
@@ -42,13 +43,17 @@
     NSTextView *textView = self._currentConsoleView;
     if (!textView) return;
 
-    BCFilePathHighlighter *highlighter = [[BCFilePathHighlighter alloc] initWithTextView:textView];
-    [highlighter attach];
-    [highlighter release];
+    BCFilePathHighlighter *pathHighlighter = [[BCFilePathHighlighter alloc] initWithTextView:textView];
+    [pathHighlighter attach];
+    [pathHighlighter release];
 
-    BCFilePathNavigator *navigator = [[BCFilePathNavigator alloc] initWithTextView:textView];
-    [navigator attach];
-    [navigator release];
+    BCColorHighlighter *colorHighlighter = [[BCColorHighlighter alloc] initWithTextView:textView];
+    [colorHighlighter attach];
+    [colorHighlighter release];
+
+    BCFilePathNavigator *pathNavigator = [[BCFilePathNavigator alloc] initWithTextView:textView];
+    [pathNavigator attach];
+    [pathNavigator release];
 }
 
 - (id)_currentWorkspaceController {

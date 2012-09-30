@@ -1,4 +1,5 @@
 #import "BCFilePathHighlighter.h"
+#import "BCUtils.h"
 #import <objc/runtime.h>
 #import <regex.h>
 
@@ -52,7 +53,8 @@ NSArray *BCFilePathHighlighter_findFilePathRanges(NSTextStorage *textStorage) {
 
 void BCFilePathHighlighter_highlightFilePathRanges(NSTextStorage *textStorage, NSArray *filePathRanges) {
     for (NSValue *rangeValue in filePathRanges) {
-        NSString *filePath = [textStorage.string substringWithRange:rangeValue.rangeValue];
+        NSRange range = rangeValue.rangeValue;
+        NSString *filePath = [textStorage.string substringWithRange:range];
 
         [textStorage addAttributes:
             [NSDictionary dictionaryWithObjectsAndKeys:
@@ -60,14 +62,16 @@ void BCFilePathHighlighter_highlightFilePathRanges(NSTextStorage *textStorage, N
                 [NSColor darkGrayColor], NSForegroundColorAttributeName,
                 [NSNumber numberWithInt:1], NSUnderlineStyleAttributeName,
                 filePath, @"BetterConsoleFilePath", nil]
-        range:rangeValue.rangeValue];
+        range:range];
     }
 }
 
 void BCFilePathHighlighter_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
-    NSTextStorage *textStorage = (NSTextStorage *)object;
-    NSArray *filePathRanges = BCFilePathHighlighter_findFilePathRanges(textStorage);
-    BCFilePathHighlighter_highlightFilePathRanges(textStorage, filePathRanges);
+    BCTimeLog(@"BetterConsole - FilePathHightlighter") {
+        NSTextStorage *textStorage = (NSTextStorage *)object;
+        NSArray *filePathRanges = BCFilePathHighlighter_findFilePathRanges(textStorage);
+        BCFilePathHighlighter_highlightFilePathRanges(textStorage, filePathRanges);
+    }
 }
 
 - (void)attach {
