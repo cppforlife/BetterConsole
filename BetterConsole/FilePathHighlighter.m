@@ -50,7 +50,7 @@ NSArray *FilePathHighlighter_findFilePathRanges(NSTextStorage *textStorage) {
     return filePathRanges;
 }
 
-void FilePathHighlighter_highlightFilePathRanges(NSArray *filePathRanges, NSTextStorage *textStorage) {
+void FilePathHighlighter_highlightFilePathRanges(NSTextStorage *textStorage, NSArray *filePathRanges) {
     for (NSValue *rangeValue in filePathRanges) {
         NSString *filePath = [textStorage.string substringWithRange:rangeValue.rangeValue];
 
@@ -66,8 +66,8 @@ void FilePathHighlighter_highlightFilePathRanges(NSArray *filePathRanges, NSText
 
 void FilePathHighlighter_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     NSTextStorage *textStorage = (NSTextStorage *)object;
-    NSArray *filePaths = FilePathHighlighter_findFilePathRanges(textStorage);
-    FilePathHighlighter_highlightFilePathRanges(filePaths, textStorage);
+    NSArray *filePathRanges = FilePathHighlighter_findFilePathRanges(textStorage);
+    FilePathHighlighter_highlightFilePathRanges(textStorage, filePathRanges);
 }
 
 - (void)attach {
