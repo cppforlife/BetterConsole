@@ -25,7 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		960FA08F1605819F00923A87 /* SchemeShortcuts.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SchemeShortcuts.xcplugin; path = BetterConsole.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		960FA08F1605819F00923A87 /* BetterConsole.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BetterConsole.xcplugin; path = BetterConsole.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		960FA0921605819F00923A87 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		960FA0961605819F00923A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960FA0A0160584AC00923A87 /* BetterConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetterConsole.h; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		960FA0901605819F00923A87 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				960FA08F1605819F00923A87 /* SchemeShortcuts.xcplugin */,
+				960FA08F1605819F00923A87 /* BetterConsole.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 			);
 			name = BetterConsole;
 			productName = BetterConsole;
-			productReference = 960FA08F1605819F00923A87 /* SchemeShortcuts.xcplugin */;
+			productReference = 960FA08F1605819F00923A87 /* BetterConsole.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
