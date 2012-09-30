@@ -14,6 +14,16 @@
 		96316C121606DC1A00834CE3 /* BCFilePathNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		969653711618017E00C28CE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 960FA0861605819F00923A87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9696536B1618014900C28CE0;
+			remoteInfo = Clean;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		960FA08F1605819F00923A87 /* SchemeShortcuts.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SchemeShortcuts.xcplugin; path = BetterConsole.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		960FA0921605819F00923A87 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -25,6 +35,7 @@
 		9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFilePathHighlighter.m; sourceTree = "<group>"; };
 		96316C101606DC1A00834CE3 /* BCFilePathNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFilePathNavigator.h; sourceTree = "<group>"; };
 		96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFilePathNavigator.m; sourceTree = "<group>"; };
+		969653701618016300C28CE0 /* clean.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = clean.sh; sourceTree = "<group>"; };
 		96FF2B871609E08D00D2A383 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,12 +97,30 @@
 			isa = PBXGroup;
 			children = (
 				960FA0961605819F00923A87 /* Info.plist */,
+				969653701618016300C28CE0 /* clean.sh */,
 			);
 			name = "Supporting Files";
 			path = BetterConsole;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		9696536B1618014900C28CE0 /* Clean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "${PROJECT_DIR}/${PROJECT}/clean.sh";
+			buildConfigurationList = 9696536E1618014900C28CE0 /* Build configuration list for PBXLegacyTarget "Clean" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = Clean;
+			passBuildSettingsInEnvironment = 1;
+			productName = Clean;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		960FA08E1605819F00923A87 /* BetterConsole */ = {
@@ -104,6 +133,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				969653721618017E00C28CE0 /* PBXTargetDependency */,
 			);
 			name = BetterConsole;
 			productName = BetterConsole;
@@ -131,6 +161,7 @@
 			projectRoot = "";
 			targets = (
 				960FA08E1605819F00923A87 /* BetterConsole */,
+				9696536B1618014900C28CE0 /* Clean */,
 			);
 		};
 /* End PBXProject section */
@@ -147,6 +178,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		969653721618017E00C28CE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9696536B1618014900C28CE0 /* Clean */;
+			targetProxy = 969653711618017E00C28CE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		960FA09B160581A000923A87 /* Debug */ = {
@@ -224,6 +263,44 @@
 			};
 			name = Release;
 		};
+		9696536C1618014900C28CE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9696536D1618014900C28CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -244,6 +321,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9696536E1618014900C28CE0 /* Build configuration list for PBXLegacyTarget "Clean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9696536C1618014900C28CE0 /* Debug */,
+				9696536D1618014900C28CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
