@@ -1,12 +1,12 @@
-#import "FilePathHighlighter.h"
+#import "BCFilePathHighlighter.h"
 #import <objc/runtime.h>
 #import <regex.h>
 
-@interface FilePathHighlighter ()
+@interface BCFilePathHighlighter ()
 @property (strong, nonatomic) NSTextView *textView;
 @end
 
-@implementation FilePathHighlighter
+@implementation BCFilePathHighlighter
 @synthesize textView = _textView;
 
 - (id)initWithTextView:(NSTextView *)textView {
@@ -30,11 +30,11 @@
     return *rx;
 }
 
-NSArray *FilePathHighlighter_findFilePathRanges(NSTextStorage *textStorage) {
+NSArray *BCFilePathHighlighter_findFilePathRanges(NSTextStorage *textStorage) {
     NSMutableArray *filePathRanges = [NSMutableArray array];
     const char *text = textStorage.string.UTF8String;
 
-    regex_t rx = [FilePathHighlighter _filePathRegex];
+    regex_t rx = [BCFilePathHighlighter _filePathRegex];
     regmatch_t *matches = malloc((rx.re_nsub+1) * sizeof(regmatch_t));
     NSUInteger matchStartIndex = 0;
 
@@ -50,7 +50,7 @@ NSArray *FilePathHighlighter_findFilePathRanges(NSTextStorage *textStorage) {
     return filePathRanges;
 }
 
-void FilePathHighlighter_highlightFilePathRanges(NSTextStorage *textStorage, NSArray *filePathRanges) {
+void BCFilePathHighlighter_highlightFilePathRanges(NSTextStorage *textStorage, NSArray *filePathRanges) {
     for (NSValue *rangeValue in filePathRanges) {
         NSString *filePath = [textStorage.string substringWithRange:rangeValue.rangeValue];
 
@@ -64,10 +64,10 @@ void FilePathHighlighter_highlightFilePathRanges(NSTextStorage *textStorage, NSA
     }
 }
 
-void FilePathHighlighter_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+void BCFilePathHighlighter_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     NSTextStorage *textStorage = (NSTextStorage *)object;
-    NSArray *filePathRanges = FilePathHighlighter_findFilePathRanges(textStorage);
-    FilePathHighlighter_highlightFilePathRanges(textStorage, filePathRanges);
+    NSArray *filePathRanges = BCFilePathHighlighter_findFilePathRanges(textStorage);
+    BCFilePathHighlighter_highlightFilePathRanges(textStorage, filePathRanges);
 }
 
 - (void)attach {
@@ -78,7 +78,7 @@ void FilePathHighlighter_Handler(CFNotificationCenterRef center, void *observer,
 
         CFNotificationCenterAddObserver(
             CFNotificationCenterGetLocalCenter(),
-            NULL, FilePathHighlighter_Handler,
+            NULL, BCFilePathHighlighter_Handler,
             (CFStringRef)NSTextStorageDidProcessEditingNotification,
             self.textView.textStorage, CFNotificationSuspensionBehaviorDeliverImmediately);
     }

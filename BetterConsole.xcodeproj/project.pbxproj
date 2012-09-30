@@ -10,8 +10,8 @@
 		960FA0931605819F00923A87 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960FA0921605819F00923A87 /* CoreFoundation.framework */; };
 		960FA0A2160584AC00923A87 /* BetterConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 960FA0A1160584AC00923A87 /* BetterConsole.m */; };
 		960FA0A51605858E00923A87 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960FA0A31605858400923A87 /* AppKit.framework */; };
-		9624292D1606D62900C3B076 /* FilePathHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624292C1606D62900C3B076 /* FilePathHighlighter.m */; };
-		96316C121606DC1A00834CE3 /* FilePathNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96316C111606DC1A00834CE3 /* FilePathNavigator.m */; };
+		9624292D1606D62900C3B076 /* BCFilePathHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */; };
+		96316C121606DC1A00834CE3 /* BCFilePathNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +21,10 @@
 		960FA0A0160584AC00923A87 /* BetterConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetterConsole.h; sourceTree = "<group>"; };
 		960FA0A1160584AC00923A87 /* BetterConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetterConsole.m; sourceTree = "<group>"; };
 		960FA0A31605858400923A87 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		9624292B1606D62900C3B076 /* FilePathHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePathHighlighter.h; sourceTree = "<group>"; };
-		9624292C1606D62900C3B076 /* FilePathHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePathHighlighter.m; sourceTree = "<group>"; };
-		96316C101606DC1A00834CE3 /* FilePathNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePathNavigator.h; sourceTree = "<group>"; };
-		96316C111606DC1A00834CE3 /* FilePathNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePathNavigator.m; sourceTree = "<group>"; };
+		9624292B1606D62900C3B076 /* BCFilePathHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFilePathHighlighter.h; sourceTree = "<group>"; };
+		9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFilePathHighlighter.m; sourceTree = "<group>"; };
+		96316C101606DC1A00834CE3 /* BCFilePathNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFilePathNavigator.h; sourceTree = "<group>"; };
+		96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFilePathNavigator.m; sourceTree = "<group>"; };
 		96FF2B871609E08D00D2A383 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,10 +74,10 @@
 			children = (
 				960FA0A0160584AC00923A87 /* BetterConsole.h */,
 				960FA0A1160584AC00923A87 /* BetterConsole.m */,
-				9624292B1606D62900C3B076 /* FilePathHighlighter.h */,
-				9624292C1606D62900C3B076 /* FilePathHighlighter.m */,
-				96316C101606DC1A00834CE3 /* FilePathNavigator.h */,
-				96316C111606DC1A00834CE3 /* FilePathNavigator.m */,
+				9624292B1606D62900C3B076 /* BCFilePathHighlighter.h */,
+				9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */,
+				96316C101606DC1A00834CE3 /* BCFilePathNavigator.h */,
+				96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */,
 			);
 			path = BetterConsole;
 			sourceTree = "<group>";
@@ -141,8 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				960FA0A2160584AC00923A87 /* BetterConsole.m in Sources */,
-				9624292D1606D62900C3B076 /* FilePathHighlighter.m in Sources */,
-				96316C121606DC1A00834CE3 /* FilePathNavigator.m in Sources */,
+				9624292D1606D62900C3B076 /* BCFilePathHighlighter.m in Sources */,
+				96316C121606DC1A00834CE3 /* BCFilePathNavigator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

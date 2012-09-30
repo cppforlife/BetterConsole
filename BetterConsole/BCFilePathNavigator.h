@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
 
-@interface FilePathHighlighter : NSObject {
+@interface BCFilePathNavigator : NSObject {
     NSTextView *_textView;
 }
 

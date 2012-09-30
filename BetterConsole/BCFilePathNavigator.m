@@ -1,7 +1,7 @@
-#import "FilePathNavigator.h"
+#import "BCFilePathNavigator.h"
 #import <objc/runtime.h>
 
-@interface NSObject (Stub)
+@interface BCFilePathNavigator (BCClassDump)
 - (id)initWithDocumentURL:(NSURL *)url timestamp:(id)timestamp lineRange:(NSRange)lineRange;
 - (id)structureEditorOpenSpecifierForDocumentLocation:(id)location inWorkspace:(id)workspace error:(id*)error;
 - (void)openEditorOpenSpecifier:(id)openSpecifier;
@@ -14,11 +14,11 @@
 - (id)primaryEditorContext;
 @end
 
-@interface FilePathNavigator ()
+@interface BCFilePathNavigator ()
 @property (strong, nonatomic) NSTextView *textView;
 @end
 
-@implementation FilePathNavigator
+@implementation BCFilePathNavigator
 @synthesize textView = _textView;
 
 - (id)initWithTextView:(NSTextView *)textView {
@@ -33,7 +33,7 @@
     [super dealloc];
 }
 
-void FilePathNavigator_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     NSTextView *textView = (NSTextView *)object;
     NSRange range = textView.selectedRange;
 
@@ -79,7 +79,7 @@ void FilePathNavigator_Handler(CFNotificationCenterRef center, void *observer, C
 
         CFNotificationCenterAddObserver(
             CFNotificationCenterGetLocalCenter(),
-            NULL, FilePathNavigator_Handler,
+            NULL, BCFilePathNavigator_Handler,
             (CFStringRef)NSTextViewDidChangeSelectionNotification,
             self.textView, CFNotificationSuspensionBehaviorDeliverImmediately);
     }
