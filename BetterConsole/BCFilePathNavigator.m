@@ -5,13 +5,14 @@
 - (id)initWithDocumentURL:(NSURL *)url timestamp:(id)timestamp lineRange:(NSRange)lineRange;
 - (id)structureEditorOpenSpecifierForDocumentLocation:(id)location inWorkspace:(id)workspace error:(id*)error;
 - (void)openEditorOpenSpecifier:(id)openSpecifier;
+- (void)_doOpenIn_AdjacentEditor_withWorkspaceTabController:(id)workspaceTabController editorContext:(id)editorContext documentURL:(id)url usingBlock:(id)block;
 
 - (id)lastActiveWorkspaceWindow;
 - (id)windowController;
 - (id)workspace;
 - (id)document;
 - (id)editorArea;
-- (id)primaryEditorContext;
+- (id)lastActiveEditorContext;
 @end
 
 @implementation BCFilePathNavigator
@@ -47,24 +48,51 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
         NSNumberFormatter* formatter = [[[NSNumberFormatter alloc] init] autorelease];
         NSUInteger lineNumber = [[formatter numberFromString:[components objectAtIndex:1]] unsignedIntegerValue];
 
-        id location =
-            [[[NSClassFromString(@"DVTTextDocumentLocation") alloc]
-                initWithDocumentURL:[NSURL fileURLWithPath:filePath]
-                timestamp:nil
-                lineRange:NSMakeRange(MAX(0, lineNumber-1), 1)] autorelease];
-
-        id window = [NSClassFromString(@"IDEWorkspaceWindow") lastActiveWorkspaceWindow];
-        id windowController = [window windowController];
-        id document = [windowController document];
-        id workspace = [document workspace];
-        id editorArea = [windowController editorArea];
-        id editorContext = [editorArea primaryEditorContext];
-
-        [editorContext openEditorOpenSpecifier:
-            [NSClassFromString(@"IDEEditorOpenSpecifier")
-                structureEditorOpenSpecifierForDocumentLocation:location
-                inWorkspace:workspace
-                error:NULL]];
+        [BCFilePathNavigator withBestPossibleEditorContext:^(id editorContext){
+            [BCFilePathNavigator openFilePath:filePath lineNumber:lineNumber inEditorContext:editorContext];
+        }];
     }
+}
+@end
+
+@implementation BCFilePathNavigator (Navigation)
+
++ (void)openFilePath:(NSString *)filePath lineNumber:(NSUInteger)lineNumber inEditorContext:(id)editorContext {
+    id location =
+        [[[NSClassFromString(@"DVTTextDocumentLocation") alloc]
+            initWithDocumentURL:[NSURL fileURLWithPath:filePath]
+            timestamp:nil
+            lineRange:NSMakeRange(MAX(0, lineNumber-1), 1)] autorelease];
+
+    [editorContext openEditorOpenSpecifier:
+        [NSClassFromString(@"IDEEditorOpenSpecifier")
+            structureEditorOpenSpecifierForDocumentLocation:location
+            inWorkspace:[editorContext workspace]
+            error:NULL]];
+}
+
++ (void)withBestPossibleEditorContext:(void(^)(id))editorContextBlock {
+    id editorArea = [self _currentEditorArea];
+    id lastEditorContext = [editorArea lastActiveEditorContext];
+
+    if ([NSEvent modifierFlags] & NSAlternateKeyMask) {
+        [self openAdjacentEditorContextTo:lastEditorContext callback:editorContextBlock];
+    } else {
+        editorContextBlock(lastEditorContext);
+    }
+}
+
++ (void)openAdjacentEditorContextTo:(id)editorContext callback:(void(^)(id))editorContextBlock {
+    [NSClassFromString(@"IDEEditorCoordinator")
+        _doOpenIn_AdjacentEditor_withWorkspaceTabController:nil
+        editorContext:editorContext
+        documentURL:nil
+        usingBlock:editorContextBlock];
+}
+
++ (id)_currentEditorArea {
+    id window = [NSClassFromString(@"IDEWorkspaceWindow") lastActiveWorkspaceWindow];
+    id workspaceWindowController = [window windowController];
+    return [workspaceWindowController editorArea];
 }
 @end
