@@ -5,7 +5,18 @@
 - (id)initWithDocumentURL:(NSURL *)url timestamp:(id)timestamp lineRange:(NSRange)lineRange;
 - (id)structureEditorOpenSpecifierForDocumentLocation:(id)location inWorkspace:(id)workspace error:(id*)error;
 - (void)openEditorOpenSpecifier:(id)openSpecifier;
-- (void)_doOpenIn_AdjacentEditor_withWorkspaceTabController:(id)workspaceTabController editorContext:(id)editorContext documentURL:(id)url usingBlock:(id)block;
+
+- (void)_doOpenIn_Ask_withWorkspaceTabController:(id)workspaceTabController
+    editorContext:(id)editorContext
+    documentURL:(id)url
+    initialSelection:(id)selection
+    options:(id)options
+    usingBlock:(id)block;
+
+- (void)_doOpenIn_AdjacentEditor_withWorkspaceTabController:(id)workspaceTabController
+    editorContext:(id)editorContext
+    documentURL:(id)url
+    usingBlock:(id)block;
 
 - (id)lastActiveWorkspaceWindow;
 - (id)windowController;
@@ -13,6 +24,11 @@
 - (id)document;
 - (id)editorArea;
 - (id)lastActiveEditorContext;
+- (id)_currentEditorArea;
+- (id)_editorContexts;
+- (id)editor;
+- (id)filePath;
+- (NSString *)pathString;
 @end
 
 @implementation BCFilePathNavigator
@@ -48,10 +64,46 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
         NSNumberFormatter* formatter = [[[NSNumberFormatter alloc] init] autorelease];
         NSUInteger lineNumber = [[formatter numberFromString:[components objectAtIndex:1]] unsignedIntegerValue];
 
-        [BCFilePathNavigator withBestPossibleEditorContext:^(id editorContext){
+        [BCFilePathNavigator bestEditorContext:^(id editorContext){
             [BCFilePathNavigator openFilePath:filePath lineNumber:lineNumber inEditorContext:editorContext];
-        }];
+        } forFilePath:filePath];
     }
+}
+@end
+
+@implementation BCFilePathNavigator (Editors)
+
++ (void)bestEditorContext:(void(^)(id))editorContextBlock forFilePath:(NSString *)filePath {
+    id editorArea = [self _currentEditorArea];
+
+    id showingEditorContext = [BCFilePathNavigator editorContextShowingFilePath:filePath];
+    if (showingEditorContext) return editorContextBlock(showingEditorContext);
+
+    id lastEditorContext = [editorArea lastActiveEditorContext];
+
+    if ([NSEvent pressedMouseButtons] == 2) {
+        [self openAdjacentEditorContextTo:lastEditorContext callback:editorContextBlock];
+    } else if ([NSEvent modifierFlags] & NSAlternateKeyMask) {
+        [self openEditorContextSelectionFrom:lastEditorContext callback:editorContextBlock];
+    } else {
+        editorContextBlock(lastEditorContext);
+    }
+}
+
++ (id)editorContextShowingFilePath:(NSString *)filePath {
+    id editorArea = [BCFilePathNavigator _currentEditorArea];
+    for (id editorContext in [editorArea _editorContexts]) {
+        id document = [[editorContext editor] document];
+        if ([[[document filePath] pathString] isEqualToString:filePath])
+            return editorContext;
+    }
+    return nil;
+}
+
++ (id)_currentEditorArea {
+    id window = [NSClassFromString(@"IDEWorkspaceWindow") lastActiveWorkspaceWindow];
+    id workspaceWindowController = [window windowController];
+    return [workspaceWindowController editorArea];
 }
 @end
 
@@ -71,16 +123,6 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
             error:NULL]];
 }
 
-+ (void)withBestPossibleEditorContext:(void(^)(id))editorContextBlock {
-    id editorArea = [self _currentEditorArea];
-    id lastEditorContext = [editorArea lastActiveEditorContext];
-
-    if ([NSEvent modifierFlags] & NSAlternateKeyMask) {
-        [self openAdjacentEditorContextTo:lastEditorContext callback:editorContextBlock];
-    } else {
-        editorContextBlock(lastEditorContext);
-    }
-}
 
 + (void)openAdjacentEditorContextTo:(id)editorContext callback:(void(^)(id))editorContextBlock {
     [NSClassFromString(@"IDEEditorCoordinator")
@@ -90,9 +132,13 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
         usingBlock:editorContextBlock];
 }
 
-+ (id)_currentEditorArea {
-    id window = [NSClassFromString(@"IDEWorkspaceWindow") lastActiveWorkspaceWindow];
-    id workspaceWindowController = [window windowController];
-    return [workspaceWindowController editorArea];
++ (void)openEditorContextSelectionFrom:(id)editorContext callback:(void(^)(id))editorContextBlock {
+    [NSClassFromString(@"IDEEditorCoordinator")
+        _doOpenIn_Ask_withWorkspaceTabController:nil
+        editorContext:editorContext
+        documentURL:[NSURL fileURLWithPath:@"file://localhost"]
+        initialSelection:nil
+        options:nil
+        usingBlock:editorContextBlock];
 }
 @end
