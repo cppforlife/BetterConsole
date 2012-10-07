@@ -74,16 +74,15 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
 @implementation BCFilePathNavigator (Editors)
 
 + (void)bestEditorContext:(void(^)(id))editorContextBlock forFilePath:(NSString *)filePath {
-    id editorArea = [self _currentEditorArea];
-
     id showingEditorContext = [BCFilePathNavigator editorContextShowingFilePath:filePath];
     if (showingEditorContext) return editorContextBlock(showingEditorContext);
 
+    id editorArea = [self _currentEditorArea];
     id lastEditorContext = [editorArea lastActiveEditorContext];
 
-    if ([NSEvent pressedMouseButtons] == 2) {
+    if ([NSEvent modifierFlags] & NSAlternateKeyMask) {
         [self openAdjacentEditorContextTo:lastEditorContext callback:editorContextBlock];
-    } else if ([NSEvent modifierFlags] & NSAlternateKeyMask) {
+    } else if ([NSEvent pressedMouseButtons] == 2) {
         [self openEditorContextSelectionFrom:lastEditorContext callback:editorContextBlock];
     } else {
         editorContextBlock(lastEditorContext);
@@ -122,7 +121,6 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
             inWorkspace:[editorContext workspace]
             error:NULL]];
 }
-
 
 + (void)openAdjacentEditorContextTo:(id)editorContext callback:(void(^)(id))editorContextBlock {
     [NSClassFromString(@"IDEEditorCoordinator")
