@@ -30,7 +30,10 @@
 
 NSArray *BCFilePathHighlighter_findFilePathRanges(NSTextStorage *textStorage) {
     NSMutableArray *filePathRanges = [NSMutableArray array];
-    const char *text = textStorage.string.UTF8String;
+
+    // forcefully ascii-ize string to obtain ranges that could be used on NSString
+    NSString *nilTerminated = [textStorage.string stringByAppendingString:@"\0"];
+    const char *text = [nilTerminated dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES].bytes;
 
     regex_t rx = [BCFilePathHighlighter _filePathRegex];
     regmatch_t *matches = malloc((rx.re_nsub+1) * sizeof(regmatch_t));
