@@ -13,6 +13,7 @@
 		9624292D1606D62900C3B076 /* BCFilePathHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */; };
 		96316C121606DC1A00834CE3 /* BCFilePathNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */; };
 		9675DE98161869F400590F98 /* BCColorHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9675DE97161869F400590F98 /* BCColorHighlighter.m */; };
+		96D126FD16D178D30004B2BF /* BCFilePathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D126FC16D178D30004B2BF /* BCFilePathFinder.m */; };
 		96F5380E16188F7800FD9AAF /* BCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5380D16188F7800FD9AAF /* BCUtils.m */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		9675DE96161869F400590F98 /* BCColorHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCColorHighlighter.h; sourceTree = "<group>"; };
 		9675DE97161869F400590F98 /* BCColorHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCColorHighlighter.m; sourceTree = "<group>"; };
 		969653701618016300C28CE0 /* clean.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = clean.sh; sourceTree = "<group>"; };
+		96D126FB16D178D30004B2BF /* BCFilePathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFilePathFinder.h; sourceTree = "<group>"; };
+		96D126FC16D178D30004B2BF /* BCFilePathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFilePathFinder.m; sourceTree = "<group>"; };
 		96F5380C16188F7800FD9AAF /* BCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCUtils.h; sourceTree = "<group>"; };
 		96F5380D16188F7800FD9AAF /* BCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCUtils.m; sourceTree = "<group>"; };
 		96FF2B871609E08D00D2A383 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */,
 				96316C101606DC1A00834CE3 /* BCFilePathNavigator.h */,
 				96316C111606DC1A00834CE3 /* BCFilePathNavigator.m */,
+				96D126FB16D178D30004B2BF /* BCFilePathFinder.h */,
+				96D126FC16D178D30004B2BF /* BCFilePathFinder.m */,
 				9675DE96161869F400590F98 /* BCColorHighlighter.h */,
 				9675DE97161869F400590F98 /* BCColorHighlighter.m */,
 				96F5380C16188F7800FD9AAF /* BCUtils.h */,
@@ -186,6 +191,7 @@
 				96316C121606DC1A00834CE3 /* BCFilePathNavigator.m in Sources */,
 				9675DE98161869F400590F98 /* BCColorHighlighter.m in Sources */,
 				96F5380E16188F7800FD9AAF /* BCUtils.m in Sources */,
+				96D126FD16D178D30004B2BF /* BCFilePathFinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

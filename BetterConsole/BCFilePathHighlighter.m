@@ -23,7 +23,7 @@
     static regex_t *rx = NULL;
     if (!rx) {
         rx = malloc(sizeof(regex_t));
-        regcomp(rx, "(/[^:\n\r]+:[[:digit:]]+)", REG_EXTENDED);
+        regcomp(rx, "([/\\*][^:\n\r]+:[[:digit:]]+)", REG_EXTENDED);
     }
     return *rx;
 }

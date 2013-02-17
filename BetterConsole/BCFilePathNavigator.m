@@ -1,5 +1,6 @@
 #import "BCFilePathNavigator.h"
 #import <objc/runtime.h>
+#import "BCFilePathFinder.h"
 
 @interface BCFilePathNavigator (BCClassDump)
 - (id)initWithDocumentURL:(NSURL *)url timestamp:(id)timestamp lineRange:(NSRange)lineRange;
@@ -60,6 +61,13 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
 
         NSArray *components = [filePathAndLineNumber componentsSeparatedByString:@":"];
         NSString *filePath = [components objectAtIndex:0];
+
+        // Some file paths might start with an asterisk
+        // to indicate that it's not absolute path.
+        if ([filePath hasPrefix:@"*"]) {
+            filePath = [BCFilePathFinder findFullFilePathByFileName:
+                        [filePath stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:@""]];
+        }
 
         NSNumberFormatter* formatter = [[[NSNumberFormatter alloc] init] autorelease];
         NSUInteger lineNumber = [[formatter numberFromString:[components objectAtIndex:1]] unsignedIntegerValue];
