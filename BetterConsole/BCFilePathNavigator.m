@@ -19,7 +19,7 @@
     documentURL:(id)url
     usingBlock:(id)block;
 
-- (id)lastActiveWorkspaceWindow;
+- (id)lastActiveWorkspaceWindowController;
 - (id)windowController;
 - (id)workspace;
 - (id)document;
@@ -108,8 +108,7 @@ void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer,
 }
 
 + (id)_currentEditorArea {
-    id window = [NSClassFromString(@"IDEWorkspaceWindow") lastActiveWorkspaceWindow];
-    id workspaceWindowController = [window windowController];
+    id workspaceWindowController = [NSClassFromString(@"IDEWorkspaceWindow") lastActiveWorkspaceWindowController];
     return [workspaceWindowController editorArea];
 }
 @end
