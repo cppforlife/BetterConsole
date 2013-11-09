@@ -19,6 +19,7 @@ def system_or_exit(cmd, stdout = nil)
   system(cmd) or raise "******** Build failed ********"
 end
 
+task :default => :install
 desc "Build & install"
 task :install => :clean do
   system_or_exit <<-BASH, output_file("install")
