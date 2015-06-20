@@ -44,12 +44,12 @@
             CFNotificationCenterGetLocalCenter(),
             NULL, BCFilePathNavigator_Handler,
             (CFStringRef)NSTextViewDidChangeSelectionNotification,
-            textView, CFNotificationSuspensionBehaviorDeliverImmediately);
+            (__bridge const void *)(textView), CFNotificationSuspensionBehaviorDeliverImmediately);
     }
 }
 
 void BCFilePathNavigator_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
-    NSTextView *textView = (NSTextView *)object;
+    NSTextView *textView = (__bridge NSTextView *)object;
     NSRange range = textView.selectedRange;
 
     if (range.length == 0 && textView.textStorage.length > range.location) {

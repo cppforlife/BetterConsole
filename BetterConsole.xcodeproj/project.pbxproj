@@ -15,6 +15,11 @@
 		9675DE98161869F400590F98 /* BCColorHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9675DE97161869F400590F98 /* BCColorHighlighter.m */; };
 		96D126FD16D178D30004B2BF /* BCFilePathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D126FC16D178D30004B2BF /* BCFilePathFinder.m */; };
 		96F5380E16188F7800FD9AAF /* BCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5380D16188F7800FD9AAF /* BCUtils.m */; };
+		F77D92BC1B352E7C00F4D4D4 /* BCFilePathHighlighterSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = F77D92BB1B352E7C00F4D4D4 /* BCFilePathHighlighterSpec.mm */; };
+		F77D92BD1B3530CC00F4D4D4 /* BCFilePathHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624292C1606D62900C3B076 /* BCFilePathHighlighter.m */; };
+		F77D92BE1B35310400F4D4D4 /* BCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5380D16188F7800FD9AAF /* BCUtils.m */; };
+		F7D3C8741B335E0600DBA526 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D3C8571B335DF500DBA526 /* Cedar.framework */; };
+		F7D3C8771B335E8500DBA526 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7D3C8761B335E8500DBA526 /* main.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +29,111 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9696536B1618014900C28CE0;
 			remoteInfo = Clean;
+		};
+		F7D3C8561B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE1FB611DC271300029872;
+			remoteInfo = Cedar;
+		};
+		F7D3C8581B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE218611DC28E200029872;
+			remoteInfo = "Cedar OS X Specs";
+		};
+		F7D3C85A1B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96A07F0813F276640021974D;
+			remoteInfo = "Cedar OS X FocusedSpecs";
+		};
+		F7D3C85C1B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE222911DC2B0600029872;
+			remoteInfo = "Cedar-StaticLib";
+		};
+		F7D3C85E1B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE227611DC2CF900029872;
+			remoteInfo = "Cedar-StaticLib Specs";
+		};
+		F7D3C8601B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE02E7E4184EABCD00414F19;
+			remoteInfo = "Cedar-iOS StaticFrameworkSpecs";
+		};
+		F7D3C8621B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B5F9F6144A81A7000A6A5D;
+			remoteInfo = "Cedar iOS Host App";
+		};
+		F7D3C8641B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B5FA11144A81A8000A6A5D;
+			remoteInfo = "Cedar iOS SenTestingKit Tests";
+		};
+		F7D3C8661B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F45A3DD180E4796003C1E36;
+			remoteInfo = "Cedar iOS XCTest Tests";
+		};
+		F7D3C8681B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE248F9819DCD52500092C14;
+			remoteInfo = "Cedar OS X Host App";
+		};
+		F7D3C86A1B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE248FAA19DCD52500092C14;
+			remoteInfo = "Cedar OS X Host AppTests";
+		};
+		F7D3C86C1B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEB8818719DCD62D00F081BA;
+			remoteInfo = "Cedar OS X Failing Test Bundle";
+		};
+		F7D3C86E1B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE4864F81B067620005DB302;
+			remoteInfo = "Cedar-iOS-Framework";
+		};
+		F7D3C8701B335DF500DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE03FBE91B06C33B00013784;
+			remoteInfo = "Cedar-iOS-Framework Specs";
+		};
+		F7D3C8721B335E0000DBA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEE1FB511DC271300029872;
+			remoteInfo = Cedar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,6 +156,315 @@
 		96F5380C16188F7800FD9AAF /* BCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCUtils.h; sourceTree = "<group>"; };
 		96F5380D16188F7800FD9AAF /* BCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCUtils.m; sourceTree = "<group>"; };
 		96FF2B871609E08D00D2A383 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F77D92BB1B352E7C00F4D4D4 /* BCFilePathHighlighterSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BCFilePathHighlighterSpec.mm; path = Specs/BCFilePathHighlighterSpec.mm; sourceTree = SOURCE_ROOT; };
+		F7D3C6B21B335D5E00DBA526 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D3C6B51B335D5E00DBA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Specs/Info.plist; sourceTree = "<group>"; };
+		F7D3C6D41B335DF400DBA526 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F7D3C6D51B335DF400DBA526 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		F7D3C6D61B335DF400DBA526 /* Cedar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cedar-Info.plist"; sourceTree = "<group>"; };
+		F7D3C6D81B335DF400DBA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D3C6DA1B335DF400DBA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D3C6DB1B335DF400DBA526 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		F7D3C6DC1B335DF400DBA526 /* Cedar.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cedar.podspec; sourceTree = "<group>"; };
+		F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Cedar.xcodeproj; sourceTree = "<group>"; };
+		F7D3C6E01B335DF400DBA526 /* CedarPlugin.xcplugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CedarPlugin.xcplugin; sourceTree = "<group>"; };
+		F7D3C6E31B335DF400DBA526 /* Cedar.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Cedar.xml; sourceTree = "<group>"; };
+		F7D3C6E51B335DF400DBA526 /* caft.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = caft.codesnippet; sourceTree = "<group>"; };
+		F7D3C6E61B335DF500DBA526 /* cbef.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cbef.codesnippet; sourceTree = "<group>"; };
+		F7D3C6E71B335DF500DBA526 /* cbl-context.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "cbl-context.codesnippet"; sourceTree = "<group>"; };
+		F7D3C6E81B335DF500DBA526 /* cbl.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cbl.codesnippet; sourceTree = "<group>"; };
+		F7D3C6E91B335DF500DBA526 /* ccont.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ccont.codesnippet; sourceTree = "<group>"; };
+		F7D3C6EA1B335DF500DBA526 /* cdesc.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cdesc.codesnippet; sourceTree = "<group>"; };
+		F7D3C6EB1B335DF500DBA526 /* cexpandpend.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cexpandpend.codesnippet; sourceTree = "<group>"; };
+		F7D3C6EC1B335DF500DBA526 /* cit.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cit.codesnippet; sourceTree = "<group>"; };
+		F7D3C6ED1B335DF500DBA526 /* clog.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = clog.codesnippet; sourceTree = "<group>"; };
+		F7D3C6EE1B335DF500DBA526 /* cpend.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cpend.codesnippet; sourceTree = "<group>"; };
+		F7D3C6EF1B335DF500DBA526 /* cshare.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cshare.codesnippet; sourceTree = "<group>"; };
+		F7D3C6F01B335DF500DBA526 /* csubj.codesnippet */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = csubj.codesnippet; sourceTree = "<group>"; };
+		F7D3C6F51B335DF500DBA526 /* ___FILEBASENAME___Spec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "___FILEBASENAME___Spec.mm"; sourceTree = "<group>"; };
+		F7D3C6F61B335DF500DBA526 /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TemplateIcon.icns; sourceTree = "<group>"; };
+		F7D3C6F71B335DF500DBA526 /* TemplateInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
+		F7D3C6F91B335DF500DBA526 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7D3C6FA1B335DF500DBA526 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		F7D3C6FB1B335DF500DBA526 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		F7D3C6FC1B335DF500DBA526 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		F7D3C6FD1B335DF500DBA526 /* installCodeSnippetsAndTemplates */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = installCodeSnippetsAndTemplates; sourceTree = "<group>"; };
+		F7D3C6FE1B335DF500DBA526 /* iOSSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSSpecs-Info.plist"; sourceTree = "<group>"; };
+		F7D3C6FF1B335DF500DBA526 /* MIT.LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MIT.LICENSE.txt; sourceTree = "<group>"; };
+		F7D3C7011B335DF500DBA526 /* DummyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DummyModel.h; sourceTree = "<group>"; };
+		F7D3C7021B335DF500DBA526 /* DummyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DummyModel.m; sourceTree = "<group>"; };
+		F7D3C7041B335DF500DBA526 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DummyView.xib; sourceTree = "<group>"; };
+		F7D3C7061B335DF500DBA526 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7D3C7081B335DF500DBA526 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F7D3C7091B335DF500DBA526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7D3C70A1B335DF500DBA526 /* OCUnitApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OCUnitApp-Info.plist"; sourceTree = "<group>"; };
+		F7D3C70B1B335DF500DBA526 /* OCUnitApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCUnitApp-Prefix.pch"; sourceTree = "<group>"; };
+		F7D3C70C1B335DF500DBA526 /* OCUnitAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCUnitAppAppDelegate.h; sourceTree = "<group>"; };
+		F7D3C70D1B335DF500DBA526 /* OCUnitAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCUnitAppAppDelegate.m; sourceTree = "<group>"; };
+		F7D3C7101B335DF500DBA526 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7D3C7111B335DF500DBA526 /* OCUnitAppLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OCUnitAppLogicTests-Info.plist"; sourceTree = "<group>"; };
+		F7D3C7121B335DF500DBA526 /* OCUnitAppLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCUnitAppLogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		F7D3C7131B335DF500DBA526 /* OCUnitAppLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCUnitAppLogicTests.m; sourceTree = "<group>"; };
+		F7D3C7141B335DF500DBA526 /* OCUnitAppLogicTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCUnitAppLogicTests.mm; sourceTree = "<group>"; };
+		F7D3C7151B335DF500DBA526 /* OCUnitAppLogicTestsWithSenTestingKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCUnitAppLogicTestsWithSenTestingKit.m; sourceTree = "<group>"; };
+		F7D3C7181B335DF500DBA526 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7D3C7191B335DF500DBA526 /* OCUnitApplicationTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCUnitApplicationTests.mm; sourceTree = "<group>"; };
+		F7D3C71A1B335DF500DBA526 /* OCUnitApplicationTestsWithSenTestingKit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCUnitApplicationTestsWithSenTestingKit.mm; sourceTree = "<group>"; };
+		F7D3C71B1B335DF500DBA526 /* OCUnitAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OCUnitAppTests-Info.plist"; sourceTree = "<group>"; };
+		F7D3C71C1B335DF500DBA526 /* OCUnitAppTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCUnitAppTests-Prefix.pch"; sourceTree = "<group>"; };
+		F7D3C71F1B335DF500DBA526 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7D3C7201B335DF500DBA526 /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
+		F7D3C7211B335DF500DBA526 /* OS X Failing Test Bundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OS X Failing Test Bundle-Info.plist"; sourceTree = "<group>"; };
+		F7D3C7221B335DF500DBA526 /* OS X Failing Test Bundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OS X Failing Test Bundle-Prefix.pch"; sourceTree = "<group>"; };
+		F7D3C7241B335DF500DBA526 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7D3C7251B335DF500DBA526 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7D3C7261B335DF500DBA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D3C7271B335DF500DBA526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7D3C7291B335DF500DBA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D3C72A1B335DF500DBA526 /* OS_X_Host_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OS_X_Host_AppTests.m; sourceTree = "<group>"; };
+		F7D3C72C1B335DF500DBA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D3C72D1B335DF500DBA526 /* OS_X_XCTest_Bundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OS_X_XCTest_Bundle.m; sourceTree = "<group>"; };
+		F7D3C72E1B335DF500DBA526 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		F7D3C72F1B335DF500DBA526 /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		F7D3C7311B335DF500DBA526 /* CDRExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRExample.m; sourceTree = "<group>"; };
+		F7D3C7321B335DF500DBA526 /* CDRExampleBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRExampleBase.m; sourceTree = "<group>"; };
+		F7D3C7331B335DF500DBA526 /* CDRExampleGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRExampleGroup.m; sourceTree = "<group>"; };
+		F7D3C7341B335DF500DBA526 /* CDRFunctions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRFunctions.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F7D3C7351B335DF500DBA526 /* CDRNil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRNil.m; sourceTree = "<group>"; };
+		F7D3C7361B335DF500DBA526 /* CDROTestRunner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDROTestRunner.m; sourceTree = "<group>"; };
+		F7D3C7371B335DF500DBA526 /* CDRRuntimeUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRRuntimeUtilities.m; sourceTree = "<group>"; };
+		F7D3C7381B335DF500DBA526 /* CDRSharedExampleGroupPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRSharedExampleGroupPool.m; sourceTree = "<group>"; };
+		F7D3C7391B335DF500DBA526 /* CDRSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRSpec.m; sourceTree = "<group>"; };
+		F7D3C73A1B335DF500DBA526 /* CDRSpecFailure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRSpecFailure.m; sourceTree = "<group>"; };
+		F7D3C73B1B335DF500DBA526 /* CDRSpecHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRSpecHelper.m; sourceTree = "<group>"; };
+		F7D3C73C1B335DF500DBA526 /* CDRSymbolicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRSymbolicator.m; sourceTree = "<group>"; };
+		F7D3C73D1B335DF500DBA526 /* CDRTypeUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRTypeUtilities.m; sourceTree = "<group>"; };
+		F7D3C7401B335DF500DBA526 /* AnyArgument.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnyArgument.mm; sourceTree = "<group>"; };
+		F7D3C7411B335DF500DBA526 /* AnyInstanceArgument.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnyInstanceArgument.mm; sourceTree = "<group>"; };
+		F7D3C7421B335DF500DBA526 /* AnyInstanceConformingToProtocolArgument.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnyInstanceConformingToProtocolArgument.mm; sourceTree = "<group>"; };
+		F7D3C7431B335DF500DBA526 /* AnyInstanceOfClassArgument.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnyInstanceOfClassArgument.mm; sourceTree = "<group>"; };
+		F7D3C7441B335DF500DBA526 /* CDRClassFake.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRClassFake.mm; sourceTree = "<group>"; };
+		F7D3C7451B335DF500DBA526 /* CDRFake.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRFake.mm; sourceTree = "<group>"; };
+		F7D3C7461B335DF500DBA526 /* CDRProtocolFake.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRProtocolFake.mm; sourceTree = "<group>"; };
+		F7D3C7471B335DF500DBA526 /* CDRSpy.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRSpy.mm; sourceTree = "<group>"; };
+		F7D3C7481B335DF500DBA526 /* CDRSpyInfo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRSpyInfo.mm; sourceTree = "<group>"; };
+		F7D3C7491B335DF500DBA526 /* CedarDouble.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarDouble.mm; sourceTree = "<group>"; };
+		F7D3C74A1B335DF500DBA526 /* CedarDoubleImpl.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarDoubleImpl.mm; sourceTree = "<group>"; };
+		F7D3C74B1B335DF500DBA526 /* HaveReceived.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HaveReceived.mm; sourceTree = "<group>"; };
+		F7D3C74C1B335DF500DBA526 /* InvocationMatcher.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InvocationMatcher.mm; sourceTree = "<group>"; };
+		F7D3C74D1B335DF500DBA526 /* RejectedMethod.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RejectedMethod.mm; sourceTree = "<group>"; };
+		F7D3C74E1B335DF500DBA526 /* StubbedMethod.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StubbedMethod.mm; sourceTree = "<group>"; };
+		F7D3C7501B335DF500DBA526 /* NSInvocation+Cedar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Cedar.m"; sourceTree = "<group>"; };
+		F7D3C7511B335DF500DBA526 /* NSMethodSignature+Cedar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+Cedar.m"; sourceTree = "<group>"; };
+		F7D3C7531B335DF500DBA526 /* CDRBlockHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRBlockHelper.h; sourceTree = "<group>"; };
+		F7D3C7541B335DF500DBA526 /* CDRExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRExample.h; sourceTree = "<group>"; };
+		F7D3C7551B335DF500DBA526 /* CDRExampleBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRExampleBase.h; sourceTree = "<group>"; };
+		F7D3C7561B335DF500DBA526 /* CDRExampleGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRExampleGroup.h; sourceTree = "<group>"; };
+		F7D3C7571B335DF500DBA526 /* CDRExampleParent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRExampleParent.h; sourceTree = "<group>"; };
+		F7D3C7581B335DF500DBA526 /* CDRFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRFunctions.h; sourceTree = "<group>"; };
+		F7D3C7591B335DF500DBA526 /* CDRHooks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRHooks.h; sourceTree = "<group>"; };
+		F7D3C75A1B335DF500DBA526 /* CDRNil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRNil.h; sourceTree = "<group>"; };
+		F7D3C75B1B335DF500DBA526 /* CDROTestRunner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDROTestRunner.h; sourceTree = "<group>"; };
+		F7D3C75C1B335DF500DBA526 /* CDRRuntimeUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRRuntimeUtilities.h; sourceTree = "<group>"; };
+		F7D3C75D1B335DF500DBA526 /* CDRSharedExampleGroupPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRSharedExampleGroupPool.h; sourceTree = "<group>"; };
+		F7D3C75E1B335DF500DBA526 /* CDRSpec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRSpec.h; sourceTree = "<group>"; };
+		F7D3C75F1B335DF500DBA526 /* CDRSpecFailure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRSpecFailure.h; sourceTree = "<group>"; };
+		F7D3C7601B335DF500DBA526 /* CDRSpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRSpecHelper.h; sourceTree = "<group>"; };
+		F7D3C7611B335DF500DBA526 /* CDRSymbolicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRSymbolicator.h; sourceTree = "<group>"; };
+		F7D3C7621B335DF500DBA526 /* CDRTypeUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRTypeUtilities.h; sourceTree = "<group>"; };
+		F7D3C7631B335DF500DBA526 /* CDRVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRVersion.h; sourceTree = "<group>"; };
+		F7D3C7641B335DF500DBA526 /* Cedar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cedar.h; sourceTree = "<group>"; };
+		F7D3C7671B335DF500DBA526 /* AnyArgument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyArgument.h; sourceTree = "<group>"; };
+		F7D3C7681B335DF500DBA526 /* AnyInstanceArgument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyInstanceArgument.h; sourceTree = "<group>"; };
+		F7D3C7691B335DF500DBA526 /* AnyInstanceConformingToProtocolArgument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyInstanceConformingToProtocolArgument.h; sourceTree = "<group>"; };
+		F7D3C76A1B335DF500DBA526 /* AnyInstanceOfClassArgument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyInstanceOfClassArgument.h; sourceTree = "<group>"; };
+		F7D3C76B1B335DF500DBA526 /* Argument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Argument.h; sourceTree = "<group>"; };
+		F7D3C76C1B335DF500DBA526 /* ReturnValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReturnValue.h; sourceTree = "<group>"; };
+		F7D3C76D1B335DF500DBA526 /* ValueArgument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValueArgument.h; sourceTree = "<group>"; };
+		F7D3C76E1B335DF500DBA526 /* CDRClassFake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRClassFake.h; sourceTree = "<group>"; };
+		F7D3C76F1B335DF500DBA526 /* CDRFake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRFake.h; sourceTree = "<group>"; };
+		F7D3C7701B335DF500DBA526 /* CDRProtocolFake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRProtocolFake.h; sourceTree = "<group>"; };
+		F7D3C7711B335DF500DBA526 /* CDRSpy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRSpy.h; sourceTree = "<group>"; };
+		F7D3C7721B335DF500DBA526 /* CDRSpyInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRSpyInfo.h; sourceTree = "<group>"; };
+		F7D3C7731B335DF500DBA526 /* CedarDouble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarDouble.h; sourceTree = "<group>"; };
+		F7D3C7741B335DF500DBA526 /* CedarDoubleImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarDoubleImpl.h; sourceTree = "<group>"; };
+		F7D3C7751B335DF500DBA526 /* CedarDoubles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarDoubles.h; sourceTree = "<group>"; };
+		F7D3C7761B335DF500DBA526 /* HaveReceived.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HaveReceived.h; sourceTree = "<group>"; };
+		F7D3C7771B335DF500DBA526 /* InvocationMatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvocationMatcher.h; sourceTree = "<group>"; };
+		F7D3C7781B335DF500DBA526 /* RejectedMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RejectedMethod.h; sourceTree = "<group>"; };
+		F7D3C7791B335DF500DBA526 /* StubbedMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StubbedMethod.h; sourceTree = "<group>"; };
+		F7D3C77B1B335DF500DBA526 /* NSInvocation+Cedar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Cedar.h"; sourceTree = "<group>"; };
+		F7D3C77C1B335DF500DBA526 /* NSMethodSignature+Cedar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+Cedar.h"; sourceTree = "<group>"; };
+		F7D3C77E1B335DF500DBA526 /* Cedar-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cedar-iOS.h"; sourceTree = "<group>"; };
+		F7D3C77F1B335DF500DBA526 /* CedarApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarApplicationDelegate.h; sourceTree = "<group>"; };
+		F7D3C7811B335DF500DBA526 /* ActualValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActualValue.h; sourceTree = "<group>"; };
+		F7D3C7831B335DF500DBA526 /* Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		F7D3C7841B335DF500DBA526 /* BeCloseTo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeCloseTo.h; sourceTree = "<group>"; };
+		F7D3C7851B335DF500DBA526 /* BeFalsy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeFalsy.h; sourceTree = "<group>"; };
+		F7D3C7861B335DF500DBA526 /* BeGreaterThan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeGreaterThan.h; sourceTree = "<group>"; };
+		F7D3C7871B335DF500DBA526 /* BeGTE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeGTE.h; sourceTree = "<group>"; };
+		F7D3C7881B335DF500DBA526 /* BeInstanceOf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeInstanceOf.h; sourceTree = "<group>"; };
+		F7D3C7891B335DF500DBA526 /* BeLessThan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeLessThan.h; sourceTree = "<group>"; };
+		F7D3C78A1B335DF500DBA526 /* BeLTE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeLTE.h; sourceTree = "<group>"; };
+		F7D3C78B1B335DF500DBA526 /* BeNil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeNil.h; sourceTree = "<group>"; };
+		F7D3C78C1B335DF500DBA526 /* BeSameInstanceAs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeSameInstanceAs.h; sourceTree = "<group>"; };
+		F7D3C78D1B335DF500DBA526 /* BeTruthy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeTruthy.h; sourceTree = "<group>"; };
+		F7D3C78E1B335DF500DBA526 /* ConformTo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConformTo.h; sourceTree = "<group>"; };
+		F7D3C78F1B335DF500DBA526 /* Equal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Equal.h; sourceTree = "<group>"; };
+		F7D3C7901B335DF500DBA526 /* Exist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exist.h; sourceTree = "<group>"; };
+		F7D3C7911B335DF500DBA526 /* RaiseException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RaiseException.h; sourceTree = "<group>"; };
+		F7D3C7921B335DF500DBA526 /* RespondTo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RespondTo.h; sourceTree = "<group>"; };
+		F7D3C7931B335DF500DBA526 /* CedarComparators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarComparators.h; sourceTree = "<group>"; };
+		F7D3C7941B335DF500DBA526 /* CedarMatchers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarMatchers.h; sourceTree = "<group>"; };
+		F7D3C7951B335DF500DBA526 /* CedarStringifiers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarStringifiers.h; sourceTree = "<group>"; };
+		F7D3C7971B335DF500DBA526 /* AnInstanceOf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnInstanceOf.h; sourceTree = "<group>"; };
+		F7D3C7981B335DF500DBA526 /* ComparatorsBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComparatorsBase.h; sourceTree = "<group>"; };
+		F7D3C7991B335DF500DBA526 /* ComparatorsContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComparatorsContainer.h; sourceTree = "<group>"; };
+		F7D3C79A1B335DF500DBA526 /* ComparatorsContainerConvenience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComparatorsContainerConvenience.h; sourceTree = "<group>"; };
+		F7D3C79B1B335DF500DBA526 /* CompareCloseTo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompareCloseTo.h; sourceTree = "<group>"; };
+		F7D3C79C1B335DF500DBA526 /* CompareEqual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompareEqual.h; sourceTree = "<group>"; };
+		F7D3C79D1B335DF500DBA526 /* CompareGreaterThan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompareGreaterThan.h; sourceTree = "<group>"; };
+		F7D3C79F1B335DF500DBA526 /* BeEmpty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeEmpty.h; sourceTree = "<group>"; };
+		F7D3C7A01B335DF500DBA526 /* Contain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contain.h; sourceTree = "<group>"; };
+		F7D3C7A11B335DF500DBA526 /* MatcherTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatcherTemplate.h; sourceTree = "<group>"; };
+		F7D3C7A31B335DF500DBA526 /* OSXGeometryCompareEqual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSXGeometryCompareEqual.h; sourceTree = "<group>"; };
+		F7D3C7A41B335DF500DBA526 /* OSXGeometryStringifiers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSXGeometryStringifiers.h; sourceTree = "<group>"; };
+		F7D3C7A51B335DF500DBA526 /* ShouldSyntax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShouldSyntax.h; sourceTree = "<group>"; };
+		F7D3C7A71B335DF500DBA526 /* StringifiersBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringifiersBase.h; sourceTree = "<group>"; };
+		F7D3C7A81B335DF500DBA526 /* StringifiersContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringifiersContainer.h; sourceTree = "<group>"; };
+		F7D3C7AA1B335DF500DBA526 /* UIGeometryCompareEqual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIGeometryCompareEqual.h; sourceTree = "<group>"; };
+		F7D3C7AB1B335DF500DBA526 /* UIGeometryStringifiers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIGeometryStringifiers.h; sourceTree = "<group>"; };
+		F7D3C7AC1B335DF500DBA526 /* UIKitComparatorsContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitComparatorsContainer.h; sourceTree = "<group>"; };
+		F7D3C7AE1B335DF500DBA526 /* CDRBufferedDefaultReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRBufferedDefaultReporter.h; sourceTree = "<group>"; };
+		F7D3C7AF1B335DF500DBA526 /* CDRColorizedReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRColorizedReporter.h; sourceTree = "<group>"; };
+		F7D3C7B01B335DF500DBA526 /* CDRDefaultReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRDefaultReporter.h; sourceTree = "<group>"; };
+		F7D3C7B11B335DF500DBA526 /* CDRExampleReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRExampleReporter.h; sourceTree = "<group>"; };
+		F7D3C7B21B335DF500DBA526 /* CDRJUnitXMLReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRJUnitXMLReporter.h; sourceTree = "<group>"; };
+		F7D3C7B31B335DF500DBA526 /* CDROTestReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDROTestReporter.h; sourceTree = "<group>"; };
+		F7D3C7B41B335DF500DBA526 /* CDRReportDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRReportDispatcher.h; sourceTree = "<group>"; };
+		F7D3C7B51B335DF500DBA526 /* CDRTeamCityReporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRTeamCityReporter.h; sourceTree = "<group>"; };
+		F7D3C7B71B335DF500DBA526 /* CedarApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CedarApplicationDelegate.m; sourceTree = "<group>"; };
+		F7D3C7B81B335DF500DBA526 /* NSBundle+MainBundleHijack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MainBundleHijack.m"; sourceTree = "<group>"; };
+		F7D3C7BA1B335DF500DBA526 /* CDRSpec+XCTestSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CDRSpec+XCTestSupport.m"; sourceTree = "<group>"; };
+		F7D3C7BB1B335DF500DBA526 /* CDRXCTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRXCTestCase.h; sourceTree = "<group>"; };
+		F7D3C7BC1B335DF500DBA526 /* CDRXCTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRXCTestCase.m; sourceTree = "<group>"; };
+		F7D3C7BD1B335DF500DBA526 /* CDRXTestSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRXTestSuite.h; sourceTree = "<group>"; };
+		F7D3C7BE1B335DF500DBA526 /* CDRXTestSuite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRXTestSuite.m; sourceTree = "<group>"; };
+		F7D3C7BF1B335DF500DBA526 /* NSInvocation+CDRXExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+CDRXExample.h"; sourceTree = "<group>"; };
+		F7D3C7C01B335DF500DBA526 /* NSInvocation+CDRXExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+CDRXExample.m"; sourceTree = "<group>"; };
+		F7D3C7C31B335DF500DBA526 /* ConformTo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ConformTo.mm; sourceTree = "<group>"; };
+		F7D3C7C41B335DF500DBA526 /* RaiseException.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RaiseException.mm; sourceTree = "<group>"; };
+		F7D3C7C51B335DF500DBA526 /* RespondTo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RespondTo.mm; sourceTree = "<group>"; };
+		F7D3C7C71B335DF500DBA526 /* StringifiersBase.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StringifiersBase.mm; sourceTree = "<group>"; };
+		F7D3C7C91B335DF500DBA526 /* CDROTestNamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDROTestNamer.h; sourceTree = "<group>"; };
+		F7D3C7CA1B335DF500DBA526 /* CDROTestNamer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDROTestNamer.m; sourceTree = "<group>"; };
+		F7D3C7CB1B335DF500DBA526 /* CDRSlowTestStatistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRSlowTestStatistics.h; sourceTree = "<group>"; };
+		F7D3C7CC1B335DF500DBA526 /* CDRSlowTestStatistics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRSlowTestStatistics.m; sourceTree = "<group>"; };
+		F7D3C7CE1B335DF500DBA526 /* CDRBufferedDefaultReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRBufferedDefaultReporter.m; sourceTree = "<group>"; };
+		F7D3C7CF1B335DF500DBA526 /* CDRColorizedReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRColorizedReporter.m; sourceTree = "<group>"; };
+		F7D3C7D01B335DF500DBA526 /* CDRDefaultReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRDefaultReporter.m; sourceTree = "<group>"; };
+		F7D3C7D11B335DF500DBA526 /* CDRJUnitXMLReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRJUnitXMLReporter.m; sourceTree = "<group>"; };
+		F7D3C7D21B335DF500DBA526 /* CDROTestReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDROTestReporter.m; sourceTree = "<group>"; };
+		F7D3C7D31B335DF500DBA526 /* CDRReportDispatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRReportDispatcher.m; sourceTree = "<group>"; };
+		F7D3C7D41B335DF500DBA526 /* CDRTeamCityReporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDRTeamCityReporter.m; sourceTree = "<group>"; };
+		F7D3C7D61B335DF500DBA526 /* CDRExampleGroupSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRExampleGroupSpec.mm; sourceTree = "<group>"; };
+		F7D3C7D71B335DF500DBA526 /* CDRExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRExampleSpec.mm; sourceTree = "<group>"; };
+		F7D3C7D81B335DF500DBA526 /* CDRNilSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRNilSpec.mm; sourceTree = "<group>"; };
+		F7D3C7D91B335DF500DBA526 /* CDRSpecFailureSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRSpecFailureSpec.mm; sourceTree = "<group>"; };
+		F7D3C7DA1B335DF500DBA526 /* CDRSpecSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRSpecSpec.mm; sourceTree = "<group>"; };
+		F7D3C7DB1B335DF500DBA526 /* CDRSymbolicatorSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRSymbolicatorSpec.mm; sourceTree = "<group>"; };
+		F7D3C7DC1B335DF500DBA526 /* CDRTypeUtilitiesSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRTypeUtilitiesSpec.mm; sourceTree = "<group>"; };
+		F7D3C7DE1B335DF500DBA526 /* CDRClassFakeSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRClassFakeSpec.mm; sourceTree = "<group>"; };
+		F7D3C7DF1B335DF500DBA526 /* CDRProtocolFakeSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRProtocolFakeSpec.mm; sourceTree = "<group>"; };
+		F7D3C7E01B335DF500DBA526 /* CDRSpySpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRSpySpec.mm; sourceTree = "<group>"; };
+		F7D3C7E11B335DF500DBA526 /* CedarDoubleARCSharedExamples.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarDoubleARCSharedExamples.mm; sourceTree = "<group>"; };
+		F7D3C7E21B335DF500DBA526 /* CedarDoubleSharedExamples.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarDoubleSharedExamples.mm; sourceTree = "<group>"; };
+		F7D3C7E31B335DF500DBA526 /* CedarNiceFakeSharedExamples.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarNiceFakeSharedExamples.mm; sourceTree = "<group>"; };
+		F7D3C7E41B335DF500DBA526 /* CedarOrdinaryFakeSharedExamples.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarOrdinaryFakeSharedExamples.mm; sourceTree = "<group>"; };
+		F7D3C7E51B335DF500DBA526 /* HaveReceivedSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HaveReceivedSpec.mm; sourceTree = "<group>"; };
+		F7D3C7E71B335DF500DBA526 /* FocusedSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FocusedSpec.m; sourceTree = "<group>"; };
+		F7D3C7E81B335DF500DBA526 /* FocusedSpec2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FocusedSpec2.m; sourceTree = "<group>"; };
+		F7D3C7E91B335DF500DBA526 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		F7D3C7EA1B335DF500DBA526 /* GlobalBeforeEachSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GlobalBeforeEachSpec.mm; sourceTree = "<group>"; };
+		F7D3C7EC1B335DF500DBA526 /* Cedar-iOSSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Cedar-iOSSpec.mm"; sourceTree = "<group>"; };
+		F7D3C7EE1B335DF500DBA526 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7D3C7EF1B335DF500DBA526 /* iOSFrameworkSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSFrameworkSpecs-Info.plist"; sourceTree = "<group>"; };
+		F7D3C7F01B335DF500DBA526 /* iOSFrameworkSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSFrameworkSpecs-Prefix.pch"; sourceTree = "<group>"; };
+		F7D3C7F11B335DF500DBA526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7D3C7F31B335DF500DBA526 /* CDRSpyiOSSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRSpyiOSSpec.mm; sourceTree = "<group>"; };
+		F7D3C7F41B335DF500DBA526 /* CedarApplicationDelegateSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarApplicationDelegateSpec.mm; sourceTree = "<group>"; };
+		F7D3C7F51B335DF500DBA526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7D3C7F61B335DF500DBA526 /* WeakReferenceCompatibilitySpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WeakReferenceCompatibilitySpec.mm; sourceTree = "<group>"; };
+		F7D3C7F81B335DF500DBA526 /* CDRXTestSuiteSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRXTestSuiteSpec.mm; sourceTree = "<group>"; };
+		F7D3C7F91B335DF500DBA526 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		F7D3C7FC1B335DF500DBA526 /* BeCloseToSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeCloseToSpec.mm; sourceTree = "<group>"; };
+		F7D3C7FD1B335DF500DBA526 /* BeFalsySpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeFalsySpec.mm; sourceTree = "<group>"; };
+		F7D3C7FE1B335DF500DBA526 /* BeGreaterThanSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeGreaterThanSpec.mm; sourceTree = "<group>"; };
+		F7D3C7FF1B335DF500DBA526 /* BeGTESpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeGTESpec.mm; sourceTree = "<group>"; };
+		F7D3C8001B335DF500DBA526 /* BeInstanceOfSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeInstanceOfSpec.mm; sourceTree = "<group>"; };
+		F7D3C8011B335DF500DBA526 /* BeLessThanSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeLessThanSpec.mm; sourceTree = "<group>"; };
+		F7D3C8021B335DF500DBA526 /* BeLTESpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeLTESpec.mm; sourceTree = "<group>"; };
+		F7D3C8031B335DF500DBA526 /* BeNil_ARCSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeNil_ARCSpec.mm; sourceTree = "<group>"; };
+		F7D3C8041B335DF500DBA526 /* BeNilSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeNilSpec.mm; sourceTree = "<group>"; };
+		F7D3C8051B335DF500DBA526 /* BeSameInstanceAs_ARCSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeSameInstanceAs_ARCSpec.mm; sourceTree = "<group>"; };
+		F7D3C8061B335DF500DBA526 /* BeSameInstanceAsSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeSameInstanceAsSpec.mm; sourceTree = "<group>"; };
+		F7D3C8071B335DF500DBA526 /* BeTruthySpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeTruthySpec.mm; sourceTree = "<group>"; };
+		F7D3C8081B335DF500DBA526 /* ConformToSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ConformToSpec.mm; sourceTree = "<group>"; };
+		F7D3C8091B335DF500DBA526 /* EqualSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EqualSpec.mm; sourceTree = "<group>"; };
+		F7D3C80A1B335DF500DBA526 /* ExistSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExistSpec.mm; sourceTree = "<group>"; };
+		F7D3C80B1B335DF500DBA526 /* MutableEqualSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MutableEqualSpec.mm; sourceTree = "<group>"; };
+		F7D3C80C1B335DF500DBA526 /* RaiseExceptionSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RaiseExceptionSpec.mm; sourceTree = "<group>"; };
+		F7D3C80D1B335DF500DBA526 /* RespondToSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RespondToSpec.mm; sourceTree = "<group>"; };
+		F7D3C80F1B335DF500DBA526 /* BeEmptySpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BeEmptySpec.mm; sourceTree = "<group>"; };
+		F7D3C8101B335DF500DBA526 /* ContainSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ContainSpec.mm; sourceTree = "<group>"; };
+		F7D3C8111B335DF500DBA526 /* ExpectFailureWithMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpectFailureWithMessage.h; sourceTree = "<group>"; };
+		F7D3C8121B335DF500DBA526 /* ExpectFailureWithMessage.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExpectFailureWithMessage.mm; sourceTree = "<group>"; };
+		F7D3C8141B335DF500DBA526 /* OSXGeometryEqualSpecSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OSXGeometryEqualSpecSpec.mm; sourceTree = "<group>"; };
+		F7D3C8161B335DF500DBA526 /* UIKitContainSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UIKitContainSpec.mm; sourceTree = "<group>"; };
+		F7D3C8171B335DF500DBA526 /* UIKitEqualSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UIKitEqualSpec.mm; sourceTree = "<group>"; };
+		F7D3C8181B335DF500DBA526 /* ObjCHeadersSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjCHeadersSpec.mm; sourceTree = "<group>"; };
+		F7D3C81A1B335DF500DBA526 /* CDRDefaultReporterSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRDefaultReporterSpec.mm; sourceTree = "<group>"; };
+		F7D3C81B1B335DF500DBA526 /* CDRJUnitXMLReporterSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDRJUnitXMLReporterSpec.mm; sourceTree = "<group>"; };
+		F7D3C81C1B335DF500DBA526 /* CDROTestReporterSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDROTestReporterSpec.mm; sourceTree = "<group>"; };
+		F7D3C81E1B335DF500DBA526 /* edward.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = edward.jpg; sourceTree = "<group>"; };
+		F7D3C81F1B335DF500DBA526 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		F7D3C8201B335DF500DBA526 /* ShouldSyntaxSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ShouldSyntaxSpec.mm; sourceTree = "<group>"; };
+		F7D3C8211B335DF500DBA526 /* SpecSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SpecSpec.mm; sourceTree = "<group>"; };
+		F7D3C8221B335DF500DBA526 /* SpecSpec2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecSpec2.m; sourceTree = "<group>"; };
+		F7D3C8241B335DF500DBA526 /* ARCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCViewController.h; sourceTree = "<group>"; };
+		F7D3C8251B335DF500DBA526 /* ARCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARCViewController.m; sourceTree = "<group>"; };
+		F7D3C8261B335DF500DBA526 /* ArgumentReleaser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArgumentReleaser.h; sourceTree = "<group>"; };
+		F7D3C8271B335DF500DBA526 /* ArgumentReleaser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArgumentReleaser.m; sourceTree = "<group>"; };
+		F7D3C8281B335DF500DBA526 /* CedarObservedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarObservedObject.h; sourceTree = "<group>"; };
+		F7D3C8291B335DF500DBA526 /* DeallocNotifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeallocNotifier.h; sourceTree = "<group>"; };
+		F7D3C82A1B335DF500DBA526 /* DeallocNotifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeallocNotifier.m; sourceTree = "<group>"; };
+		F7D3C82B1B335DF500DBA526 /* ExampleWithPublicRunDates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleWithPublicRunDates.h; sourceTree = "<group>"; };
+		F7D3C82C1B335DF500DBA526 /* ExampleWithPublicRunDates.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleWithPublicRunDates.mm; sourceTree = "<group>"; };
+		F7D3C82D1B335DF500DBA526 /* FibonacciCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FibonacciCalculator.h; sourceTree = "<group>"; };
+		F7D3C82E1B335DF500DBA526 /* FibonacciCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FibonacciCalculator.m; sourceTree = "<group>"; };
+		F7D3C82F1B335DF500DBA526 /* FooSuperclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FooSuperclass.h; sourceTree = "<group>"; };
+		F7D3C8301B335DF500DBA526 /* FooSuperclass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FooSuperclass.m; sourceTree = "<group>"; };
+		F7D3C8321B335DF500DBA526 /* GDataXMLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		F7D3C8331B335DF500DBA526 /* GDataXMLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		F7D3C8341B335DF500DBA526 /* ObjectWithCollections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectWithCollections.h; sourceTree = "<group>"; };
+		F7D3C8351B335DF500DBA526 /* ObjectWithCollections.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectWithCollections.m; sourceTree = "<group>"; };
+		F7D3C8361B335DF500DBA526 /* ObjectWithForwardingTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectWithForwardingTarget.h; sourceTree = "<group>"; };
+		F7D3C8371B335DF500DBA526 /* ObjectWithForwardingTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectWithForwardingTarget.m; sourceTree = "<group>"; };
+		F7D3C8381B335DF500DBA526 /* ObjectWithProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectWithProperty.h; sourceTree = "<group>"; };
+		F7D3C8391B335DF500DBA526 /* ObjectWithProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectWithProperty.m; sourceTree = "<group>"; };
+		F7D3C83A1B335DF500DBA526 /* ObjectWithValueEquality.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectWithValueEquality.h; sourceTree = "<group>"; };
+		F7D3C83B1B335DF500DBA526 /* ObjectWithValueEquality.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectWithValueEquality.m; sourceTree = "<group>"; };
+		F7D3C83C1B335DF500DBA526 /* ObjectWithWeakDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectWithWeakDelegate.h; sourceTree = "<group>"; };
+		F7D3C83D1B335DF500DBA526 /* ObjectWithWeakDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectWithWeakDelegate.m; sourceTree = "<group>"; };
+		F7D3C83E1B335DF500DBA526 /* SimpleIncrementer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleIncrementer.h; sourceTree = "<group>"; };
+		F7D3C83F1B335DF500DBA526 /* SimpleIncrementer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleIncrementer.m; sourceTree = "<group>"; };
+		F7D3C8401B335DF500DBA526 /* SimpleKeyValueObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleKeyValueObserver.h; sourceTree = "<group>"; };
+		F7D3C8411B335DF500DBA526 /* SimpleKeyValueObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleKeyValueObserver.m; sourceTree = "<group>"; };
+		F7D3C8421B335DF500DBA526 /* SimpleMultiplier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleMultiplier.h; sourceTree = "<group>"; };
+		F7D3C8431B335DF500DBA526 /* upgradeCedarFramework */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = upgradeCedarFramework; sourceTree = "<group>"; };
+		F7D3C8451B335DF500DBA526 /* XCUnitApplicationTestsWithXCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCUnitApplicationTestsWithXCTest.m; sourceTree = "<group>"; };
+		F7D3C8461B335DF500DBA526 /* XCUnitAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XCUnitAppTests-Info.plist"; sourceTree = "<group>"; };
+		F7D3C8761B335E8500DBA526 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +477,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7D3C6AF1B335D5E00DBA526 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D3C8741B335E0600DBA526 /* Cedar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		960FA0841605819F00923A87 = {
 			isa = PBXGroup;
 			children = (
+				F7D3C6D21B335DF400DBA526 /* Externals */,
 				96FF2B871609E08D00D2A383 /* README.md */,
 				960FA0941605819F00923A87 /* BetterConsole */,
 				960FA0951605819F00923A87 /* Supporting Files */,
+				F7D3C6B31B335D5E00DBA526 /* Specs */,
 				960FA0911605819F00923A87 /* Frameworks */,
 				960FA0901605819F00923A87 /* Products */,
 			);
@@ -76,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				960FA08F1605819F00923A87 /* BetterConsole.xcplugin */,
+				F7D3C6B21B335D5E00DBA526 /* Specs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,9 +543,816 @@
 			children = (
 				960FA0961605819F00923A87 /* Info.plist */,
 				969653701618016300C28CE0 /* clean.sh */,
+				F77D92BB1B352E7C00F4D4D4 /* BCFilePathHighlighterSpec.mm */,
 			);
 			name = "Supporting Files";
 			path = BetterConsole;
+			sourceTree = "<group>";
+		};
+		F7D3C6B31B335D5E00DBA526 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C8761B335E8500DBA526 /* main.mm */,
+				F7D3C6B41B335D5E00DBA526 /* Supporting Files */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		F7D3C6B41B335D5E00DBA526 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6B51B335D5E00DBA526 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7D3C6D21B335DF400DBA526 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6D31B335DF400DBA526 /* Cedar */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		F7D3C6D31B335DF400DBA526 /* Cedar */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6D41B335DF400DBA526 /* .gitignore */,
+				F7D3C6D51B335DF400DBA526 /* .travis.yml */,
+				F7D3C6D61B335DF400DBA526 /* Cedar-Info.plist */,
+				F7D3C6D71B335DF400DBA526 /* Cedar-iOS-Framework */,
+				F7D3C6D91B335DF400DBA526 /* Cedar-iOS-Framework Spec */,
+				F7D3C6DC1B335DF400DBA526 /* Cedar.podspec */,
+				F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */,
+				F7D3C6E01B335DF400DBA526 /* CedarPlugin.xcplugin */,
+				F7D3C6E11B335DF400DBA526 /* CodeSnippetsAndTemplates */,
+				F7D3C6F81B335DF500DBA526 /* InfoPlist.strings */,
+				F7D3C6FA1B335DF500DBA526 /* Gemfile */,
+				F7D3C6FB1B335DF500DBA526 /* Gemfile.lock */,
+				F7D3C6FC1B335DF500DBA526 /* install.sh */,
+				F7D3C6FD1B335DF500DBA526 /* installCodeSnippetsAndTemplates */,
+				F7D3C6FE1B335DF500DBA526 /* iOSSpecs-Info.plist */,
+				F7D3C6FF1B335DF500DBA526 /* MIT.LICENSE.txt */,
+				F7D3C7001B335DF500DBA526 /* OCUnitApp */,
+				F7D3C70E1B335DF500DBA526 /* OCUnitAppLogicTests */,
+				F7D3C7161B335DF500DBA526 /* OCUnitAppTests */,
+				F7D3C71D1B335DF500DBA526 /* OS X Failing Test Bundle */,
+				F7D3C7231B335DF500DBA526 /* OS X Host App */,
+				F7D3C7281B335DF500DBA526 /* OS X Host AppTests */,
+				F7D3C72B1B335DF500DBA526 /* OS X XCTest Bundle */,
+				F7D3C72E1B335DF500DBA526 /* Rakefile */,
+				F7D3C72F1B335DF500DBA526 /* README.markdown */,
+				F7D3C7301B335DF500DBA526 /* Source */,
+				F7D3C7D51B335DF500DBA526 /* Spec */,
+				F7D3C8431B335DF500DBA526 /* upgradeCedarFramework */,
+				F7D3C8441B335DF500DBA526 /* XCUnitAppTests */,
+			);
+			path = Cedar;
+			sourceTree = "<group>";
+		};
+		F7D3C6D71B335DF400DBA526 /* Cedar-iOS-Framework */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6D81B335DF400DBA526 /* Info.plist */,
+			);
+			path = "Cedar-iOS-Framework";
+			sourceTree = "<group>";
+		};
+		F7D3C6D91B335DF400DBA526 /* Cedar-iOS-Framework Spec */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6DA1B335DF400DBA526 /* Info.plist */,
+				F7D3C6DB1B335DF400DBA526 /* main.mm */,
+			);
+			path = "Cedar-iOS-Framework Spec";
+			sourceTree = "<group>";
+		};
+		F7D3C6DE1B335DF400DBA526 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C8571B335DF500DBA526 /* Cedar.framework */,
+				F7D3C8591B335DF500DBA526 /* Cedar OS X Specs */,
+				F7D3C85B1B335DF500DBA526 /* Cedar OS X FocusedSpecs */,
+				F7D3C85D1B335DF500DBA526 /* libCedar-StaticLib.a */,
+				F7D3C85F1B335DF500DBA526 /* Cedar-StaticLib Specs.app */,
+				F7D3C8611B335DF500DBA526 /* Cedar-iOS StaticFrameworkSpecs.app */,
+				F7D3C8631B335DF500DBA526 /* Cedar iOS Host App.app */,
+				F7D3C8651B335DF500DBA526 /* Cedar iOS SenTestingKit Tests.octest */,
+				F7D3C8671B335DF500DBA526 /* XCUnitAppTests.xctest */,
+				F7D3C8691B335DF500DBA526 /* Cedar OS X Host App.app */,
+				F7D3C86B1B335DF500DBA526 /* Cedar OS X Host AppTests.xctest */,
+				F7D3C86D1B335DF500DBA526 /* Cedar OS X Failing Test Bundle.octest */,
+				F7D3C86F1B335DF500DBA526 /* Cedar.framework */,
+				F7D3C8711B335DF500DBA526 /* Cedar-iOS-Framework Specs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7D3C6E11B335DF400DBA526 /* CodeSnippetsAndTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6E21B335DF400DBA526 /* AppCodeSnippets */,
+				F7D3C6E41B335DF400DBA526 /* CodeSnippets */,
+				F7D3C6F11B335DF500DBA526 /* Templates */,
+			);
+			path = CodeSnippetsAndTemplates;
+			sourceTree = "<group>";
+		};
+		F7D3C6E21B335DF400DBA526 /* AppCodeSnippets */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6E31B335DF400DBA526 /* Cedar.xml */,
+			);
+			path = AppCodeSnippets;
+			sourceTree = "<group>";
+		};
+		F7D3C6E41B335DF400DBA526 /* CodeSnippets */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6E51B335DF400DBA526 /* caft.codesnippet */,
+				F7D3C6E61B335DF500DBA526 /* cbef.codesnippet */,
+				F7D3C6E71B335DF500DBA526 /* cbl-context.codesnippet */,
+				F7D3C6E81B335DF500DBA526 /* cbl.codesnippet */,
+				F7D3C6E91B335DF500DBA526 /* ccont.codesnippet */,
+				F7D3C6EA1B335DF500DBA526 /* cdesc.codesnippet */,
+				F7D3C6EB1B335DF500DBA526 /* cexpandpend.codesnippet */,
+				F7D3C6EC1B335DF500DBA526 /* cit.codesnippet */,
+				F7D3C6ED1B335DF500DBA526 /* clog.codesnippet */,
+				F7D3C6EE1B335DF500DBA526 /* cpend.codesnippet */,
+				F7D3C6EF1B335DF500DBA526 /* cshare.codesnippet */,
+				F7D3C6F01B335DF500DBA526 /* csubj.codesnippet */,
+			);
+			path = CodeSnippets;
+			sourceTree = "<group>";
+		};
+		F7D3C6F11B335DF500DBA526 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6F21B335DF500DBA526 /* File Templates */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		F7D3C6F21B335DF500DBA526 /* File Templates */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6F31B335DF500DBA526 /* Cedar */,
+			);
+			path = "File Templates";
+			sourceTree = "<group>";
+		};
+		F7D3C6F31B335DF500DBA526 /* Cedar */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6F41B335DF500DBA526 /* Cedar Spec.xctemplate */,
+			);
+			path = Cedar;
+			sourceTree = "<group>";
+		};
+		F7D3C6F41B335DF500DBA526 /* Cedar Spec.xctemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C6F51B335DF500DBA526 /* ___FILEBASENAME___Spec.mm */,
+				F7D3C6F61B335DF500DBA526 /* TemplateIcon.icns */,
+				F7D3C6F71B335DF500DBA526 /* TemplateInfo.plist */,
+			);
+			path = "Cedar Spec.xctemplate";
+			sourceTree = "<group>";
+		};
+		F7D3C7001B335DF500DBA526 /* OCUnitApp */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7011B335DF500DBA526 /* DummyModel.h */,
+				F7D3C7021B335DF500DBA526 /* DummyModel.m */,
+				F7D3C7031B335DF500DBA526 /* DummyView.xib */,
+				F7D3C7051B335DF500DBA526 /* InfoPlist.strings */,
+				F7D3C7071B335DF500DBA526 /* MainWindow.xib */,
+				F7D3C7091B335DF500DBA526 /* main.m */,
+				F7D3C70A1B335DF500DBA526 /* OCUnitApp-Info.plist */,
+				F7D3C70B1B335DF500DBA526 /* OCUnitApp-Prefix.pch */,
+				F7D3C70C1B335DF500DBA526 /* OCUnitAppAppDelegate.h */,
+				F7D3C70D1B335DF500DBA526 /* OCUnitAppAppDelegate.m */,
+			);
+			path = OCUnitApp;
+			sourceTree = "<group>";
+		};
+		F7D3C70E1B335DF500DBA526 /* OCUnitAppLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C70F1B335DF500DBA526 /* InfoPlist.strings */,
+				F7D3C7111B335DF500DBA526 /* OCUnitAppLogicTests-Info.plist */,
+				F7D3C7121B335DF500DBA526 /* OCUnitAppLogicTests-Prefix.pch */,
+				F7D3C7131B335DF500DBA526 /* OCUnitAppLogicTests.m */,
+				F7D3C7141B335DF500DBA526 /* OCUnitAppLogicTests.mm */,
+				F7D3C7151B335DF500DBA526 /* OCUnitAppLogicTestsWithSenTestingKit.m */,
+			);
+			path = OCUnitAppLogicTests;
+			sourceTree = "<group>";
+		};
+		F7D3C7161B335DF500DBA526 /* OCUnitAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7171B335DF500DBA526 /* InfoPlist.strings */,
+				F7D3C7191B335DF500DBA526 /* OCUnitApplicationTests.mm */,
+				F7D3C71A1B335DF500DBA526 /* OCUnitApplicationTestsWithSenTestingKit.mm */,
+				F7D3C71B1B335DF500DBA526 /* OCUnitAppTests-Info.plist */,
+				F7D3C71C1B335DF500DBA526 /* OCUnitAppTests-Prefix.pch */,
+			);
+			path = OCUnitAppTests;
+			sourceTree = "<group>";
+		};
+		F7D3C71D1B335DF500DBA526 /* OS X Failing Test Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C71E1B335DF500DBA526 /* InfoPlist.strings */,
+				F7D3C7201B335DF500DBA526 /* ExampleSpec.mm */,
+				F7D3C7211B335DF500DBA526 /* OS X Failing Test Bundle-Info.plist */,
+				F7D3C7221B335DF500DBA526 /* OS X Failing Test Bundle-Prefix.pch */,
+			);
+			path = "OS X Failing Test Bundle";
+			sourceTree = "<group>";
+		};
+		F7D3C7231B335DF500DBA526 /* OS X Host App */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7241B335DF500DBA526 /* AppDelegate.h */,
+				F7D3C7251B335DF500DBA526 /* AppDelegate.m */,
+				F7D3C7261B335DF500DBA526 /* Info.plist */,
+				F7D3C7271B335DF500DBA526 /* main.m */,
+			);
+			path = "OS X Host App";
+			sourceTree = "<group>";
+		};
+		F7D3C7281B335DF500DBA526 /* OS X Host AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7291B335DF500DBA526 /* Info.plist */,
+				F7D3C72A1B335DF500DBA526 /* OS_X_Host_AppTests.m */,
+			);
+			path = "OS X Host AppTests";
+			sourceTree = "<group>";
+		};
+		F7D3C72B1B335DF500DBA526 /* OS X XCTest Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C72C1B335DF500DBA526 /* Info.plist */,
+				F7D3C72D1B335DF500DBA526 /* OS_X_XCTest_Bundle.m */,
+			);
+			path = "OS X XCTest Bundle";
+			sourceTree = "<group>";
+		};
+		F7D3C7301B335DF500DBA526 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7311B335DF500DBA526 /* CDRExample.m */,
+				F7D3C7321B335DF500DBA526 /* CDRExampleBase.m */,
+				F7D3C7331B335DF500DBA526 /* CDRExampleGroup.m */,
+				F7D3C7341B335DF500DBA526 /* CDRFunctions.m */,
+				F7D3C7351B335DF500DBA526 /* CDRNil.m */,
+				F7D3C7361B335DF500DBA526 /* CDROTestRunner.m */,
+				F7D3C7371B335DF500DBA526 /* CDRRuntimeUtilities.m */,
+				F7D3C7381B335DF500DBA526 /* CDRSharedExampleGroupPool.m */,
+				F7D3C7391B335DF500DBA526 /* CDRSpec.m */,
+				F7D3C73A1B335DF500DBA526 /* CDRSpecFailure.m */,
+				F7D3C73B1B335DF500DBA526 /* CDRSpecHelper.m */,
+				F7D3C73C1B335DF500DBA526 /* CDRSymbolicator.m */,
+				F7D3C73D1B335DF500DBA526 /* CDRTypeUtilities.m */,
+				F7D3C73E1B335DF500DBA526 /* Doubles */,
+				F7D3C74F1B335DF500DBA526 /* Extensions */,
+				F7D3C7521B335DF500DBA526 /* Headers */,
+				F7D3C7B61B335DF500DBA526 /* iPhone */,
+				F7D3C7C11B335DF500DBA526 /* Matchers */,
+				F7D3C7C81B335DF500DBA526 /* ReporterHelpers */,
+				F7D3C7CD1B335DF500DBA526 /* Reporters */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F7D3C73E1B335DF500DBA526 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C73F1B335DF500DBA526 /* Arguments */,
+				F7D3C7441B335DF500DBA526 /* CDRClassFake.mm */,
+				F7D3C7451B335DF500DBA526 /* CDRFake.mm */,
+				F7D3C7461B335DF500DBA526 /* CDRProtocolFake.mm */,
+				F7D3C7471B335DF500DBA526 /* CDRSpy.mm */,
+				F7D3C7481B335DF500DBA526 /* CDRSpyInfo.mm */,
+				F7D3C7491B335DF500DBA526 /* CedarDouble.mm */,
+				F7D3C74A1B335DF500DBA526 /* CedarDoubleImpl.mm */,
+				F7D3C74B1B335DF500DBA526 /* HaveReceived.mm */,
+				F7D3C74C1B335DF500DBA526 /* InvocationMatcher.mm */,
+				F7D3C74D1B335DF500DBA526 /* RejectedMethod.mm */,
+				F7D3C74E1B335DF500DBA526 /* StubbedMethod.mm */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		F7D3C73F1B335DF500DBA526 /* Arguments */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7401B335DF500DBA526 /* AnyArgument.mm */,
+				F7D3C7411B335DF500DBA526 /* AnyInstanceArgument.mm */,
+				F7D3C7421B335DF500DBA526 /* AnyInstanceConformingToProtocolArgument.mm */,
+				F7D3C7431B335DF500DBA526 /* AnyInstanceOfClassArgument.mm */,
+			);
+			path = Arguments;
+			sourceTree = "<group>";
+		};
+		F7D3C74F1B335DF500DBA526 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7501B335DF500DBA526 /* NSInvocation+Cedar.m */,
+				F7D3C7511B335DF500DBA526 /* NSMethodSignature+Cedar.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7D3C7521B335DF500DBA526 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7531B335DF500DBA526 /* CDRBlockHelper.h */,
+				F7D3C7541B335DF500DBA526 /* CDRExample.h */,
+				F7D3C7551B335DF500DBA526 /* CDRExampleBase.h */,
+				F7D3C7561B335DF500DBA526 /* CDRExampleGroup.h */,
+				F7D3C7571B335DF500DBA526 /* CDRExampleParent.h */,
+				F7D3C7581B335DF500DBA526 /* CDRFunctions.h */,
+				F7D3C7591B335DF500DBA526 /* CDRHooks.h */,
+				F7D3C75A1B335DF500DBA526 /* CDRNil.h */,
+				F7D3C75B1B335DF500DBA526 /* CDROTestRunner.h */,
+				F7D3C75C1B335DF500DBA526 /* CDRRuntimeUtilities.h */,
+				F7D3C75D1B335DF500DBA526 /* CDRSharedExampleGroupPool.h */,
+				F7D3C75E1B335DF500DBA526 /* CDRSpec.h */,
+				F7D3C75F1B335DF500DBA526 /* CDRSpecFailure.h */,
+				F7D3C7601B335DF500DBA526 /* CDRSpecHelper.h */,
+				F7D3C7611B335DF500DBA526 /* CDRSymbolicator.h */,
+				F7D3C7621B335DF500DBA526 /* CDRTypeUtilities.h */,
+				F7D3C7631B335DF500DBA526 /* CDRVersion.h */,
+				F7D3C7641B335DF500DBA526 /* Cedar.h */,
+				F7D3C7651B335DF500DBA526 /* Doubles */,
+				F7D3C77A1B335DF500DBA526 /* Extensions */,
+				F7D3C77D1B335DF500DBA526 /* iPhone */,
+				F7D3C7801B335DF500DBA526 /* Matchers */,
+				F7D3C7AD1B335DF500DBA526 /* Reporters */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		F7D3C7651B335DF500DBA526 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7661B335DF500DBA526 /* Arguments */,
+				F7D3C76E1B335DF500DBA526 /* CDRClassFake.h */,
+				F7D3C76F1B335DF500DBA526 /* CDRFake.h */,
+				F7D3C7701B335DF500DBA526 /* CDRProtocolFake.h */,
+				F7D3C7711B335DF500DBA526 /* CDRSpy.h */,
+				F7D3C7721B335DF500DBA526 /* CDRSpyInfo.h */,
+				F7D3C7731B335DF500DBA526 /* CedarDouble.h */,
+				F7D3C7741B335DF500DBA526 /* CedarDoubleImpl.h */,
+				F7D3C7751B335DF500DBA526 /* CedarDoubles.h */,
+				F7D3C7761B335DF500DBA526 /* HaveReceived.h */,
+				F7D3C7771B335DF500DBA526 /* InvocationMatcher.h */,
+				F7D3C7781B335DF500DBA526 /* RejectedMethod.h */,
+				F7D3C7791B335DF500DBA526 /* StubbedMethod.h */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		F7D3C7661B335DF500DBA526 /* Arguments */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7671B335DF500DBA526 /* AnyArgument.h */,
+				F7D3C7681B335DF500DBA526 /* AnyInstanceArgument.h */,
+				F7D3C7691B335DF500DBA526 /* AnyInstanceConformingToProtocolArgument.h */,
+				F7D3C76A1B335DF500DBA526 /* AnyInstanceOfClassArgument.h */,
+				F7D3C76B1B335DF500DBA526 /* Argument.h */,
+				F7D3C76C1B335DF500DBA526 /* ReturnValue.h */,
+				F7D3C76D1B335DF500DBA526 /* ValueArgument.h */,
+			);
+			path = Arguments;
+			sourceTree = "<group>";
+		};
+		F7D3C77A1B335DF500DBA526 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C77B1B335DF500DBA526 /* NSInvocation+Cedar.h */,
+				F7D3C77C1B335DF500DBA526 /* NSMethodSignature+Cedar.h */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7D3C77D1B335DF500DBA526 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C77E1B335DF500DBA526 /* Cedar-iOS.h */,
+				F7D3C77F1B335DF500DBA526 /* CedarApplicationDelegate.h */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		F7D3C7801B335DF500DBA526 /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7811B335DF500DBA526 /* ActualValue.h */,
+				F7D3C7821B335DF500DBA526 /* Base */,
+				F7D3C7931B335DF500DBA526 /* CedarComparators.h */,
+				F7D3C7941B335DF500DBA526 /* CedarMatchers.h */,
+				F7D3C7951B335DF500DBA526 /* CedarStringifiers.h */,
+				F7D3C7961B335DF500DBA526 /* Comparators */,
+				F7D3C79E1B335DF500DBA526 /* Container */,
+				F7D3C7A11B335DF500DBA526 /* MatcherTemplate.h */,
+				F7D3C7A21B335DF500DBA526 /* OSX */,
+				F7D3C7A51B335DF500DBA526 /* ShouldSyntax.h */,
+				F7D3C7A61B335DF500DBA526 /* Stringifiers */,
+				F7D3C7A91B335DF500DBA526 /* UIKit */,
+			);
+			path = Matchers;
+			sourceTree = "<group>";
+		};
+		F7D3C7821B335DF500DBA526 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7831B335DF500DBA526 /* Base.h */,
+				F7D3C7841B335DF500DBA526 /* BeCloseTo.h */,
+				F7D3C7851B335DF500DBA526 /* BeFalsy.h */,
+				F7D3C7861B335DF500DBA526 /* BeGreaterThan.h */,
+				F7D3C7871B335DF500DBA526 /* BeGTE.h */,
+				F7D3C7881B335DF500DBA526 /* BeInstanceOf.h */,
+				F7D3C7891B335DF500DBA526 /* BeLessThan.h */,
+				F7D3C78A1B335DF500DBA526 /* BeLTE.h */,
+				F7D3C78B1B335DF500DBA526 /* BeNil.h */,
+				F7D3C78C1B335DF500DBA526 /* BeSameInstanceAs.h */,
+				F7D3C78D1B335DF500DBA526 /* BeTruthy.h */,
+				F7D3C78E1B335DF500DBA526 /* ConformTo.h */,
+				F7D3C78F1B335DF500DBA526 /* Equal.h */,
+				F7D3C7901B335DF500DBA526 /* Exist.h */,
+				F7D3C7911B335DF500DBA526 /* RaiseException.h */,
+				F7D3C7921B335DF500DBA526 /* RespondTo.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F7D3C7961B335DF500DBA526 /* Comparators */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7971B335DF500DBA526 /* AnInstanceOf.h */,
+				F7D3C7981B335DF500DBA526 /* ComparatorsBase.h */,
+				F7D3C7991B335DF500DBA526 /* ComparatorsContainer.h */,
+				F7D3C79A1B335DF500DBA526 /* ComparatorsContainerConvenience.h */,
+				F7D3C79B1B335DF500DBA526 /* CompareCloseTo.h */,
+				F7D3C79C1B335DF500DBA526 /* CompareEqual.h */,
+				F7D3C79D1B335DF500DBA526 /* CompareGreaterThan.h */,
+			);
+			path = Comparators;
+			sourceTree = "<group>";
+		};
+		F7D3C79E1B335DF500DBA526 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C79F1B335DF500DBA526 /* BeEmpty.h */,
+				F7D3C7A01B335DF500DBA526 /* Contain.h */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		F7D3C7A21B335DF500DBA526 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7A31B335DF500DBA526 /* OSXGeometryCompareEqual.h */,
+				F7D3C7A41B335DF500DBA526 /* OSXGeometryStringifiers.h */,
+			);
+			path = OSX;
+			sourceTree = "<group>";
+		};
+		F7D3C7A61B335DF500DBA526 /* Stringifiers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7A71B335DF500DBA526 /* StringifiersBase.h */,
+				F7D3C7A81B335DF500DBA526 /* StringifiersContainer.h */,
+			);
+			path = Stringifiers;
+			sourceTree = "<group>";
+		};
+		F7D3C7A91B335DF500DBA526 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7AA1B335DF500DBA526 /* UIGeometryCompareEqual.h */,
+				F7D3C7AB1B335DF500DBA526 /* UIGeometryStringifiers.h */,
+				F7D3C7AC1B335DF500DBA526 /* UIKitComparatorsContainer.h */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F7D3C7AD1B335DF500DBA526 /* Reporters */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7AE1B335DF500DBA526 /* CDRBufferedDefaultReporter.h */,
+				F7D3C7AF1B335DF500DBA526 /* CDRColorizedReporter.h */,
+				F7D3C7B01B335DF500DBA526 /* CDRDefaultReporter.h */,
+				F7D3C7B11B335DF500DBA526 /* CDRExampleReporter.h */,
+				F7D3C7B21B335DF500DBA526 /* CDRJUnitXMLReporter.h */,
+				F7D3C7B31B335DF500DBA526 /* CDROTestReporter.h */,
+				F7D3C7B41B335DF500DBA526 /* CDRReportDispatcher.h */,
+				F7D3C7B51B335DF500DBA526 /* CDRTeamCityReporter.h */,
+			);
+			path = Reporters;
+			sourceTree = "<group>";
+		};
+		F7D3C7B61B335DF500DBA526 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7B71B335DF500DBA526 /* CedarApplicationDelegate.m */,
+				F7D3C7B81B335DF500DBA526 /* NSBundle+MainBundleHijack.m */,
+				F7D3C7B91B335DF500DBA526 /* XCTest */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		F7D3C7B91B335DF500DBA526 /* XCTest */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7BA1B335DF500DBA526 /* CDRSpec+XCTestSupport.m */,
+				F7D3C7BB1B335DF500DBA526 /* CDRXCTestCase.h */,
+				F7D3C7BC1B335DF500DBA526 /* CDRXCTestCase.m */,
+				F7D3C7BD1B335DF500DBA526 /* CDRXTestSuite.h */,
+				F7D3C7BE1B335DF500DBA526 /* CDRXTestSuite.m */,
+				F7D3C7BF1B335DF500DBA526 /* NSInvocation+CDRXExample.h */,
+				F7D3C7C01B335DF500DBA526 /* NSInvocation+CDRXExample.m */,
+			);
+			path = XCTest;
+			sourceTree = "<group>";
+		};
+		F7D3C7C11B335DF500DBA526 /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7C21B335DF500DBA526 /* Base */,
+				F7D3C7C61B335DF500DBA526 /* Stringifiers */,
+			);
+			path = Matchers;
+			sourceTree = "<group>";
+		};
+		F7D3C7C21B335DF500DBA526 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7C31B335DF500DBA526 /* ConformTo.mm */,
+				F7D3C7C41B335DF500DBA526 /* RaiseException.mm */,
+				F7D3C7C51B335DF500DBA526 /* RespondTo.mm */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F7D3C7C61B335DF500DBA526 /* Stringifiers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7C71B335DF500DBA526 /* StringifiersBase.mm */,
+			);
+			path = Stringifiers;
+			sourceTree = "<group>";
+		};
+		F7D3C7C81B335DF500DBA526 /* ReporterHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7C91B335DF500DBA526 /* CDROTestNamer.h */,
+				F7D3C7CA1B335DF500DBA526 /* CDROTestNamer.m */,
+				F7D3C7CB1B335DF500DBA526 /* CDRSlowTestStatistics.h */,
+				F7D3C7CC1B335DF500DBA526 /* CDRSlowTestStatistics.m */,
+			);
+			path = ReporterHelpers;
+			sourceTree = "<group>";
+		};
+		F7D3C7CD1B335DF500DBA526 /* Reporters */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7CE1B335DF500DBA526 /* CDRBufferedDefaultReporter.m */,
+				F7D3C7CF1B335DF500DBA526 /* CDRColorizedReporter.m */,
+				F7D3C7D01B335DF500DBA526 /* CDRDefaultReporter.m */,
+				F7D3C7D11B335DF500DBA526 /* CDRJUnitXMLReporter.m */,
+				F7D3C7D21B335DF500DBA526 /* CDROTestReporter.m */,
+				F7D3C7D31B335DF500DBA526 /* CDRReportDispatcher.m */,
+				F7D3C7D41B335DF500DBA526 /* CDRTeamCityReporter.m */,
+			);
+			path = Reporters;
+			sourceTree = "<group>";
+		};
+		F7D3C7D51B335DF500DBA526 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7D61B335DF500DBA526 /* CDRExampleGroupSpec.mm */,
+				F7D3C7D71B335DF500DBA526 /* CDRExampleSpec.mm */,
+				F7D3C7D81B335DF500DBA526 /* CDRNilSpec.mm */,
+				F7D3C7D91B335DF500DBA526 /* CDRSpecFailureSpec.mm */,
+				F7D3C7DA1B335DF500DBA526 /* CDRSpecSpec.mm */,
+				F7D3C7DB1B335DF500DBA526 /* CDRSymbolicatorSpec.mm */,
+				F7D3C7DC1B335DF500DBA526 /* CDRTypeUtilitiesSpec.mm */,
+				F7D3C7DD1B335DF500DBA526 /* Doubles */,
+				F7D3C7E61B335DF500DBA526 /* Focused */,
+				F7D3C7EA1B335DF500DBA526 /* GlobalBeforeEachSpec.mm */,
+				F7D3C7EB1B335DF500DBA526 /* iOSFrameworkSpecs */,
+				F7D3C7F21B335DF500DBA526 /* iPhone */,
+				F7D3C7F91B335DF500DBA526 /* main.mm */,
+				F7D3C7FA1B335DF500DBA526 /* Matchers */,
+				F7D3C8181B335DF500DBA526 /* ObjCHeadersSpec.mm */,
+				F7D3C8191B335DF500DBA526 /* Reporters */,
+				F7D3C81D1B335DF500DBA526 /* Resources */,
+				F7D3C8201B335DF500DBA526 /* ShouldSyntaxSpec.mm */,
+				F7D3C8211B335DF500DBA526 /* SpecSpec.mm */,
+				F7D3C8221B335DF500DBA526 /* SpecSpec2.m */,
+				F7D3C8231B335DF500DBA526 /* Support */,
+			);
+			path = Spec;
+			sourceTree = "<group>";
+		};
+		F7D3C7DD1B335DF500DBA526 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7DE1B335DF500DBA526 /* CDRClassFakeSpec.mm */,
+				F7D3C7DF1B335DF500DBA526 /* CDRProtocolFakeSpec.mm */,
+				F7D3C7E01B335DF500DBA526 /* CDRSpySpec.mm */,
+				F7D3C7E11B335DF500DBA526 /* CedarDoubleARCSharedExamples.mm */,
+				F7D3C7E21B335DF500DBA526 /* CedarDoubleSharedExamples.mm */,
+				F7D3C7E31B335DF500DBA526 /* CedarNiceFakeSharedExamples.mm */,
+				F7D3C7E41B335DF500DBA526 /* CedarOrdinaryFakeSharedExamples.mm */,
+				F7D3C7E51B335DF500DBA526 /* HaveReceivedSpec.mm */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		F7D3C7E61B335DF500DBA526 /* Focused */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7E71B335DF500DBA526 /* FocusedSpec.m */,
+				F7D3C7E81B335DF500DBA526 /* FocusedSpec2.m */,
+				F7D3C7E91B335DF500DBA526 /* main.mm */,
+			);
+			path = Focused;
+			sourceTree = "<group>";
+		};
+		F7D3C7EB1B335DF500DBA526 /* iOSFrameworkSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7EC1B335DF500DBA526 /* Cedar-iOSSpec.mm */,
+				F7D3C7ED1B335DF500DBA526 /* InfoPlist.strings */,
+				F7D3C7EF1B335DF500DBA526 /* iOSFrameworkSpecs-Info.plist */,
+				F7D3C7F01B335DF500DBA526 /* iOSFrameworkSpecs-Prefix.pch */,
+				F7D3C7F11B335DF500DBA526 /* main.m */,
+			);
+			path = iOSFrameworkSpecs;
+			sourceTree = "<group>";
+		};
+		F7D3C7F21B335DF500DBA526 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7F31B335DF500DBA526 /* CDRSpyiOSSpec.mm */,
+				F7D3C7F41B335DF500DBA526 /* CedarApplicationDelegateSpec.mm */,
+				F7D3C7F51B335DF500DBA526 /* main.m */,
+				F7D3C7F61B335DF500DBA526 /* WeakReferenceCompatibilitySpec.mm */,
+				F7D3C7F71B335DF500DBA526 /* XCTest */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		F7D3C7F71B335DF500DBA526 /* XCTest */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7F81B335DF500DBA526 /* CDRXTestSuiteSpec.mm */,
+			);
+			path = XCTest;
+			sourceTree = "<group>";
+		};
+		F7D3C7FA1B335DF500DBA526 /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7FB1B335DF500DBA526 /* Base */,
+				F7D3C80E1B335DF500DBA526 /* Container */,
+				F7D3C8111B335DF500DBA526 /* ExpectFailureWithMessage.h */,
+				F7D3C8121B335DF500DBA526 /* ExpectFailureWithMessage.mm */,
+				F7D3C8131B335DF500DBA526 /* OSX */,
+				F7D3C8151B335DF500DBA526 /* UIKit */,
+			);
+			path = Matchers;
+			sourceTree = "<group>";
+		};
+		F7D3C7FB1B335DF500DBA526 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C7FC1B335DF500DBA526 /* BeCloseToSpec.mm */,
+				F7D3C7FD1B335DF500DBA526 /* BeFalsySpec.mm */,
+				F7D3C7FE1B335DF500DBA526 /* BeGreaterThanSpec.mm */,
+				F7D3C7FF1B335DF500DBA526 /* BeGTESpec.mm */,
+				F7D3C8001B335DF500DBA526 /* BeInstanceOfSpec.mm */,
+				F7D3C8011B335DF500DBA526 /* BeLessThanSpec.mm */,
+				F7D3C8021B335DF500DBA526 /* BeLTESpec.mm */,
+				F7D3C8031B335DF500DBA526 /* BeNil_ARCSpec.mm */,
+				F7D3C8041B335DF500DBA526 /* BeNilSpec.mm */,
+				F7D3C8051B335DF500DBA526 /* BeSameInstanceAs_ARCSpec.mm */,
+				F7D3C8061B335DF500DBA526 /* BeSameInstanceAsSpec.mm */,
+				F7D3C8071B335DF500DBA526 /* BeTruthySpec.mm */,
+				F7D3C8081B335DF500DBA526 /* ConformToSpec.mm */,
+				F7D3C8091B335DF500DBA526 /* EqualSpec.mm */,
+				F7D3C80A1B335DF500DBA526 /* ExistSpec.mm */,
+				F7D3C80B1B335DF500DBA526 /* MutableEqualSpec.mm */,
+				F7D3C80C1B335DF500DBA526 /* RaiseExceptionSpec.mm */,
+				F7D3C80D1B335DF500DBA526 /* RespondToSpec.mm */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F7D3C80E1B335DF500DBA526 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C80F1B335DF500DBA526 /* BeEmptySpec.mm */,
+				F7D3C8101B335DF500DBA526 /* ContainSpec.mm */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		F7D3C8131B335DF500DBA526 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C8141B335DF500DBA526 /* OSXGeometryEqualSpecSpec.mm */,
+			);
+			path = OSX;
+			sourceTree = "<group>";
+		};
+		F7D3C8151B335DF500DBA526 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C8161B335DF500DBA526 /* UIKitContainSpec.mm */,
+				F7D3C8171B335DF500DBA526 /* UIKitEqualSpec.mm */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F7D3C8191B335DF500DBA526 /* Reporters */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C81A1B335DF500DBA526 /* CDRDefaultReporterSpec.mm */,
+				F7D3C81B1B335DF500DBA526 /* CDRJUnitXMLReporterSpec.mm */,
+				F7D3C81C1B335DF500DBA526 /* CDROTestReporterSpec.mm */,
+			);
+			path = Reporters;
+			sourceTree = "<group>";
+		};
+		F7D3C81D1B335DF500DBA526 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C81E1B335DF500DBA526 /* edward.jpg */,
+				F7D3C81F1B335DF500DBA526 /* image.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F7D3C8231B335DF500DBA526 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C8241B335DF500DBA526 /* ARCViewController.h */,
+				F7D3C8251B335DF500DBA526 /* ARCViewController.m */,
+				F7D3C8261B335DF500DBA526 /* ArgumentReleaser.h */,
+				F7D3C8271B335DF500DBA526 /* ArgumentReleaser.m */,
+				F7D3C8281B335DF500DBA526 /* CedarObservedObject.h */,
+				F7D3C8291B335DF500DBA526 /* DeallocNotifier.h */,
+				F7D3C82A1B335DF500DBA526 /* DeallocNotifier.m */,
+				F7D3C82B1B335DF500DBA526 /* ExampleWithPublicRunDates.h */,
+				F7D3C82C1B335DF500DBA526 /* ExampleWithPublicRunDates.mm */,
+				F7D3C82D1B335DF500DBA526 /* FibonacciCalculator.h */,
+				F7D3C82E1B335DF500DBA526 /* FibonacciCalculator.m */,
+				F7D3C82F1B335DF500DBA526 /* FooSuperclass.h */,
+				F7D3C8301B335DF500DBA526 /* FooSuperclass.m */,
+				F7D3C8311B335DF500DBA526 /* GData */,
+				F7D3C8341B335DF500DBA526 /* ObjectWithCollections.h */,
+				F7D3C8351B335DF500DBA526 /* ObjectWithCollections.m */,
+				F7D3C8361B335DF500DBA526 /* ObjectWithForwardingTarget.h */,
+				F7D3C8371B335DF500DBA526 /* ObjectWithForwardingTarget.m */,
+				F7D3C8381B335DF500DBA526 /* ObjectWithProperty.h */,
+				F7D3C8391B335DF500DBA526 /* ObjectWithProperty.m */,
+				F7D3C83A1B335DF500DBA526 /* ObjectWithValueEquality.h */,
+				F7D3C83B1B335DF500DBA526 /* ObjectWithValueEquality.m */,
+				F7D3C83C1B335DF500DBA526 /* ObjectWithWeakDelegate.h */,
+				F7D3C83D1B335DF500DBA526 /* ObjectWithWeakDelegate.m */,
+				F7D3C83E1B335DF500DBA526 /* SimpleIncrementer.h */,
+				F7D3C83F1B335DF500DBA526 /* SimpleIncrementer.m */,
+				F7D3C8401B335DF500DBA526 /* SimpleKeyValueObserver.h */,
+				F7D3C8411B335DF500DBA526 /* SimpleKeyValueObserver.m */,
+				F7D3C8421B335DF500DBA526 /* SimpleMultiplier.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F7D3C8311B335DF500DBA526 /* GData */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C8321B335DF500DBA526 /* GDataXMLNode.h */,
+				F7D3C8331B335DF500DBA526 /* GDataXMLNode.m */,
+			);
+			path = GData;
+			sourceTree = "<group>";
+		};
+		F7D3C8441B335DF500DBA526 /* XCUnitAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7D3C8451B335DF500DBA526 /* XCUnitApplicationTestsWithXCTest.m */,
+				F7D3C8461B335DF500DBA526 /* XCUnitAppTests-Info.plist */,
+			);
+			path = XCUnitAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +1392,24 @@
 			productReference = 960FA08F1605819F00923A87 /* BetterConsole.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
+		F7D3C6B11B335D5E00DBA526 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7D3C6D01B335D5F00DBA526 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				F7D3C6AE1B335D5E00DBA526 /* Sources */,
+				F7D3C6AF1B335D5E00DBA526 /* Frameworks */,
+				F7D3C6B01B335D5E00DBA526 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7D3C8731B335E0000DBA526 /* PBXTargetDependency */,
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = F7D3C6B21B335D5E00DBA526 /* Specs.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -162,6 +1417,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0440;
+				TargetAttributes = {
+					F7D3C6B11B335D5E00DBA526 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
 			};
 			buildConfigurationList = 960FA0891605819F00923A87 /* Build configuration list for PBXProject "BetterConsole" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -169,17 +1429,137 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				English,
 			);
 			mainGroup = 960FA0841605819F00923A87;
 			productRefGroup = 960FA0901605819F00923A87 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F7D3C6DE1B335DF400DBA526 /* Products */;
+					ProjectRef = F7D3C6DD1B335DF400DBA526 /* Cedar.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				960FA08E1605819F00923A87 /* BetterConsole */,
 				9696536B1618014900C28CE0 /* Clean */,
+				F7D3C6B11B335D5E00DBA526 /* Specs */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F7D3C8571B335DF500DBA526 /* Cedar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Cedar.framework;
+			remoteRef = F7D3C8561B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C8591B335DF500DBA526 /* Cedar OS X Specs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "Cedar OS X Specs";
+			remoteRef = F7D3C8581B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C85B1B335DF500DBA526 /* Cedar OS X FocusedSpecs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "Cedar OS X FocusedSpecs";
+			remoteRef = F7D3C85A1B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C85D1B335DF500DBA526 /* libCedar-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCedar-StaticLib.a";
+			remoteRef = F7D3C85C1B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C85F1B335DF500DBA526 /* Cedar-StaticLib Specs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Cedar-StaticLib Specs.app";
+			remoteRef = F7D3C85E1B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C8611B335DF500DBA526 /* Cedar-iOS StaticFrameworkSpecs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Cedar-iOS StaticFrameworkSpecs.app";
+			remoteRef = F7D3C8601B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C8631B335DF500DBA526 /* Cedar iOS Host App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Cedar iOS Host App.app";
+			remoteRef = F7D3C8621B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C8651B335DF500DBA526 /* Cedar iOS SenTestingKit Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Cedar iOS SenTestingKit Tests.octest";
+			remoteRef = F7D3C8641B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C8671B335DF500DBA526 /* XCUnitAppTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCUnitAppTests.xctest;
+			remoteRef = F7D3C8661B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C8691B335DF500DBA526 /* Cedar OS X Host App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Cedar OS X Host App.app";
+			remoteRef = F7D3C8681B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C86B1B335DF500DBA526 /* Cedar OS X Host AppTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Cedar OS X Host AppTests.xctest";
+			remoteRef = F7D3C86A1B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C86D1B335DF500DBA526 /* Cedar OS X Failing Test Bundle.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Cedar OS X Failing Test Bundle.octest";
+			remoteRef = F7D3C86C1B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C86F1B335DF500DBA526 /* Cedar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Cedar.framework;
+			remoteRef = F7D3C86E1B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7D3C8711B335DF500DBA526 /* Cedar-iOS-Framework Specs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Cedar-iOS-Framework Specs.app";
+			remoteRef = F7D3C8701B335DF500DBA526 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7D3C6B01B335D5E00DBA526 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		960FA08B1605819F00923A87 /* Sources */ = {
@@ -195,6 +1575,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7D3C6AE1B335D5E00DBA526 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F77D92BC1B352E7C00F4D4D4 /* BCFilePathHighlighterSpec.mm in Sources */,
+				F77D92BD1B3530CC00F4D4D4 /* BCFilePathHighlighter.m in Sources */,
+				F77D92BE1B35310400F4D4D4 /* BCUtils.m in Sources */,
+				F7D3C8771B335E8500DBA526 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -203,7 +1594,79 @@
 			target = 9696536B1618014900C28CE0 /* Clean */;
 			targetProxy = 969653711618017E00C28CE0 /* PBXContainerItemProxy */;
 		};
+		F7D3C8731B335E0000DBA526 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cedar;
+			targetProxy = F7D3C8721B335E0000DBA526 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7D3C6F81B335DF500DBA526 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7D3C6F91B335DF500DBA526 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7D3C7031B335DF500DBA526 /* DummyView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7D3C7041B335DF500DBA526 /* en */,
+			);
+			name = DummyView.xib;
+			sourceTree = "<group>";
+		};
+		F7D3C7051B335DF500DBA526 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7D3C7061B335DF500DBA526 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7D3C7071B335DF500DBA526 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7D3C7081B335DF500DBA526 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		F7D3C70F1B335DF500DBA526 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7D3C7101B335DF500DBA526 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7D3C7171B335DF500DBA526 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7D3C7181B335DF500DBA526 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7D3C71E1B335DF500DBA526 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7D3C71F1B335DF500DBA526 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7D3C7ED1B335DF500DBA526 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7D3C7EE1B335DF500DBA526 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		960FA09B160581A000923A87 /* Debug */ = {
@@ -246,6 +1709,7 @@
 		960FA09E160581A000923A87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
@@ -265,6 +1729,7 @@
 		960FA09F160581A000923A87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
@@ -319,6 +1784,87 @@
 			};
 			name = Release;
 		};
+		F7D3C6CC1B335D5F00DBA526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Externals/Cedar/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Specs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7D3C6CD1B335D5F00DBA526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Externals/Cedar/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Specs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +1891,15 @@
 			buildConfigurations = (
 				9696536C1618014900C28CE0 /* Debug */,
 				9696536D1618014900C28CE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7D3C6D01B335D5F00DBA526 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7D3C6CC1B335D5F00DBA526 /* Debug */,
+				F7D3C6CD1B335D5F00DBA526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

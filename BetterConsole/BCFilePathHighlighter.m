@@ -15,9 +15,21 @@
             CFNotificationCenterGetLocalCenter(),
             NULL, BCFilePathHighlighter_Handler,
             (CFStringRef)NSTextStorageDidProcessEditingNotification,
-            textView.textStorage, CFNotificationSuspensionBehaviorDeliverImmediately);
+            (__bridge const void *)(textView.textStorage), CFNotificationSuspensionBehaviorDeliverImmediately);
     }
 }
+
++ (BOOL)isFilePath:(NSString *)string
+{
+    regex_t filePathRegex = [self _filePathRegex];
+    regmatch_t *matches = malloc((filePathRegex.re_nsub+1) * sizeof(regmatch_t));
+    const char *text = [[[string stringByAppendingString:@"\0"] dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] bytes];
+
+    int result = regexec(&filePathRegex, text, filePathRegex.re_nsub+1, matches, 0);
+    return result == 0;
+}
+
+#pragma mark - Private
 
 + (regex_t)_filePathRegex {
     static regex_t *rx = NULL;
@@ -68,7 +80,7 @@ void BCFilePathHighlighter_highlightFilePathRanges(NSTextStorage *textStorage, N
 
 void BCFilePathHighlighter_Handler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     BCTimeLog(@"BetterConsole - FilePathHightlighter") {
-        NSTextStorage *textStorage = (NSTextStorage *)object;
+        NSTextStorage *textStorage = (__bridge NSTextStorage *)object;
         NSArray *filePathRanges = BCFilePathHighlighter_findFilePathRanges(textStorage);
         BCFilePathHighlighter_highlightFilePathRanges(textStorage, filePathRanges);
     }
