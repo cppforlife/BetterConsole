@@ -1,7 +1,7 @@
 Deprecated
 ==========
 
-This Xcode Plugin (and all others) will stop working Xcode 8. If you care deeply about Xcode plugins such as this, please (PLEASE!) file Radars to Apple asking for the XcodeKit API to expand to allow support for extensions like this one.
+This Xcode Plugin (and all others) cannot work with Xcode 8 and above. If you care deeply about Xcode plugins such as this, please (PLEASE!) file Radars to Apple asking for the XcodeKit API to expand to allow support for extensions like this one.
 
 BetterConsole
 -------------
